@@ -1,0 +1,2 @@
+# testnet
+public testnet
