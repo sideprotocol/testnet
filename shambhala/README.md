@@ -1,1 +1,1 @@
-Here's docs for Shambhala testnet
+Here's docs for our first testnet:  Shambhala
