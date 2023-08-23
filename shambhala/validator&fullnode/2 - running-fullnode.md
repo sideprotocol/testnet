@@ -1,5 +1,7 @@
 # How to run a fullnode of SIDE blockchain
 
+
+
 ## Initialize Wallet Keyring
 
 ```sh
@@ -21,11 +23,6 @@ enroll index bind glad tonight rhythm barely negative south quarter main length 
 ### Query your local keys:
 ```sh
 sided keys list
-```
-
-### Query your validator public key:
-```sh
-sided tendermint show-validator
 ```
 
 ## Get some SIDE from faucet
