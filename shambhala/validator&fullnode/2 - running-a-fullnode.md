@@ -40,7 +40,7 @@ enroll index bind glad tonight rhythm barely negative south quarter main length 
 
 This command generates a new 24-word mnemonic phrase, persists it to the relevant backend, and outputs information about the keypair. If this keypair will be used to hold value-bearing tokens, be sure to write down the mnemonic phrase somewhere safe!
 
-By default, the keyring generates a secp256k1 keypair. The keyring also supports ed25519 keys, which may be created by passing the --algo ed25519 flag. A keyring can of course hold both types of keys simultaneously, and the Cosmos SDK's x/auth module supports natively these two public key algorithms.
+By default, the keyring generates a secp256k1 keypair. The keyring also supports ed25519 keys, which may be created by passing the `--algo ed25519` flag. A keyring can of course hold both types of keys simultaneously, and the Cosmos SDK's x/auth module supports natively these two public key algorithms.
 
 ### Query your local keys:
 ```sh
