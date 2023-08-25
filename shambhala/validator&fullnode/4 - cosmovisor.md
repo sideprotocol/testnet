@@ -35,7 +35,7 @@ nano ~/.profile
 Once you're in, we suggest you to set the following values:
 
 ```shell
-export DAEMON_HOME=$HOME/.sidechaind
+export DAEMON_HOME=$HOME/.sidechain
 export DAEMON_NAME=sided
 export DAEMON_ALLOW_DOWNLOAD_BINARIES=true
 export DAEMON_RESTART_AFTER_UPGRADE=true
