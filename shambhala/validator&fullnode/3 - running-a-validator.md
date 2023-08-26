@@ -40,25 +40,25 @@ sided tx staking create-validator \
 
 If you need further explanation for each of these command flags:
 
- - the from flag is the KEY_NAME you created when initializing the key on your keyring
- - the amount flag is the amount you will place in your own validator in uside 
- - the pubkey is the validator public key found earlier
- - the moniker is a human-readable name you choose for your validator
- - the security-contact is an email your delegates are able to contact you at
- - the chain-id is whatever chain-id you are working with
- - the commission-rate is the rate you will charge your delegates
- - the commission-max-rate is the most you are allowed to charge your delegates
- - the commission-max-change-rate is how much you can increase your commission rate in a 24 hour period
- - the min-self-delegation is the lowest amount of personal funds the validator is required to have in their own validator to stay bonded 
- - the gas-prices is the amount of gas used to send this create-validator transaction
+ - the `from` flag is the KEY_NAME you created when initializing the key on your keyring
+ - the `amount` flag is the amount you will place in your own validator in uside 
+ - the `pubkey` is the validator public key found earlier
+ - the `moniker` is a human-readable name you choose for your validator
+ - the `security-contact` is an email your delegates are able to contact you at
+ - the `chain-id` is whatever chain-id you are working with
+ - the `commission-rate` is the rate you will charge your delegates
+ - the `commission-max-rate` is the most you are allowed to charge your delegates
+ - the `commission-max-change-rate` is how much you can increase your commission rate in a 24 hour period
+ - the `min-self-delegation` is the lowest amount of personal funds the validator is required to have in their own validator to stay bonded 
+ - the `gas-prices` is the amount of gas used to send this create-validator transaction
 
 ## Editing Validator Description
 
-You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to empty (--moniker defaults to the machine name) if the field has never been set or remain the same if it has been set in the past.
+You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to empty (`--moniker` defaults to the machine name) if the field has never been set or remain the same if it has been set in the past.
 
-The <key_name> specifies which validator you are editing. If you choose to not include some flags below, remember that the --from flag must be included to identify the validator to update.
+The `<key_name>` specifies which validator you are editing. If you choose to not include some flags below, remember that the `--from` flag must be included to identify the validator to update.
 
-The --identity can be used as to verify identity with systems like Keybase or UPort. When using Keybase, --identity should be populated with a 16-digit string that is generated with a keybase.io (opens new window)account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
+The `--identity` can be used as to verify identity with systems like Keybase or UPort. When using Keybase, `--identity` should be populated with a 16-digit string that is generated with a keybase.io (opens new window)account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
 
 ```shell
 sided tx staking edit-validator
@@ -76,7 +76,7 @@ sided tx staking edit-validator
 **Note**: The `commission-rate` value must adhere to the following rules:
 
  - Must be between 0 and the validator's `commission-max-rate`
- - Must not exceed the validator's `commission-max-change-rate` which is maximum % point change rate per day. In other words, a validator can only change its commission once per day and within commission-max-change-rate bounds.
+ - Must not exceed the validator's `commission-max-change-rate` which is maximum % point change rate per day. In other words, a validator can only change its commission once per day and within `commission-max-change-rate` bounds.
 
 ## Viewing Validator Description
 
@@ -103,7 +103,7 @@ Your validator is active if the following command returns anything:
 sided query tendermint-validator-set | grep "$(sided tendermint show-address)"
 ```
 
-You should now see your validator in one of SIDE blockchain explorers. You are looking for the bech32 encoded address in the ~/.sidechain/config/priv_validator.json file.
+You should now see your validator in one of SIDE blockchain explorers. You are looking for the bech32 encoded address in the `~/.sided/config/priv_validator.json` file.
 
 ## Halting Your Validator
 When attempting to perform routine maintenance or planning for an upcoming coordinated upgrade, it can be useful to have your validator systematically and gracefully halt. You can achieve this by either setting the `halt-height` to the height at which you want your node to shutdown or by passing the `--halt-height` flag to sided. The node will shutdown with a zero exit code at that given height after committing the block.
