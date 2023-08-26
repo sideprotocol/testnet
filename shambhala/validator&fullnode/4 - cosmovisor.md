@@ -26,7 +26,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
  - `DAEMON_POLL_INTERVAL` (optional, default = 300ms) is the interval length for polling the upgrade plan file. The value can either be a number (in milliseconds) or a duration (e.g. 1s).
  - `UNSAFE_SKIP_BACKUP` (optional, default = false), if set to true, upgrades directly without performing a backup. Otherwise (false) backs up the data before trying the upgrade. The default value of false is useful and recommended in case of failures and when a backup needed to rollback. We recommend using the default backup option `UNSAFE_SKIP_BACKUP=false`.
 
-To properly set those variables, we suggest you to edit the ~/.profile file so that they are loaded when you log into your machine. To edit this file you can simply run
+To properly set those variables, we suggest you to edit the `~/.profile` file so that they are loaded when you log into your machine. To edit this file you can simply run
 
 ```shell
 nano ~/.profile
@@ -42,7 +42,7 @@ export DAEMON_RESTART_AFTER_UPGRADE=true
 export UNSAFE_SKIP_BACKUP=true
 ```
 
-Once you're done, `Ctrl+o` and `Ctrl+x`: To save the file. then reload the ~/.profile file by running
+Once you're done, `Ctrl+o` and `Ctrl+x`: To save the file. then reload the `~/.profile` file by running
 
 ```shell
 source ~/.profile
