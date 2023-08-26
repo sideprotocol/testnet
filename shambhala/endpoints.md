@@ -1,4 +1,9 @@
+# Block Explorer
+ - https://explorer.side.exchange
 
+# Faucet
+ - https://faucet.side.exchange
+   
 # Endpoint:
  - RPC: https://testnet-rpc.side.one
  - Rest: https://testnet-rest.side.one
