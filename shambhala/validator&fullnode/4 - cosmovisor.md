@@ -19,7 +19,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 
 `cosmovisor` relies on the following environmental variables to work properly:
 
- - `DAEMON_HOME` is the location where upgrade binaries should be kept (e.g. $HOME/.sidechain).
+ - `DAEMON_HOME` is the location where upgrade binaries should be kept (e.g. $HOME/.sided).
  - `DAEMON_NAME` is the name of the binary itself (eg. sided).
  - `DAEMON_ALLOW_DOWNLOAD_BINARIES` (optional, default = false) if set to true will enable auto-downloading of new binaries (for security reasons, this is intended for full nodes rather than validators).
  - `DAEMON_RESTART_AFTER_UPGRADE` (optional, default = true) if set to true it will restart the sub-process with the same command line arguments and flags (but new binary) after a successful upgrade. By default, cosmovisor dies afterwards and allows the supervisor to restart it if needed. Note that this will not auto-restart the child if there was an error.
@@ -35,7 +35,7 @@ nano ~/.profile
 Once you're in, we suggest you to set the following values:
 
 ```shell
-export DAEMON_HOME=$HOME/.sidechaind
+export DAEMON_HOME=$HOME/.sided
 export DAEMON_NAME=sided
 export DAEMON_ALLOW_DOWNLOAD_BINARIES=true
 export DAEMON_RESTART_AFTER_UPGRADE=true
@@ -107,7 +107,7 @@ Restart=always
 RestartSec=3
 LimitNOFILE=4096
 Environment="DAEMON_NAME=sided"
-Environment="DAEMON_HOME=$HOME/.sidechain"
+Environment="DAEMON_HOME=$HOME/.sided"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="DAEMON_LOG_BUFFER_SIZE=512"

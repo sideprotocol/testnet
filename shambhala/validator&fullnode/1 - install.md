@@ -1,4 +1,17 @@
-This page contains information about building sidechain node from sources
+This page contains information about building SIDE blockchain node from sources
+
+## Hardware Specifications
+
+1. Minimum Requirements
+   1. CPU: 2 cores
+   2. RAM: 4 GB
+   3. Storage: 200 GB
+   4. Network: 1 Gbps
+2. Recommended Specifications
+   1. CPU: 4 cores
+   2. RAM: 8 GB
+   3. Storage: 500 GB
+   4. Network: 1 Gbps
 
 ## Prerequisites
 Golang v1.20 ([go releases and instructions](https://go.dev/dl/)).

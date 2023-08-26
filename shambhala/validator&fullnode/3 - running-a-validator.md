@@ -7,7 +7,7 @@ The following instructions assume you have already set up a full-node and are sy
 
 ## Creating Your Validator
 
-### Get some SIDE from faucet
+### Get some SIDE tokens from faucet
 
 -  https://faucet.side.one
 
@@ -100,7 +100,7 @@ sided tx slashing unjail \
 Your validator is active if the following command returns anything:
 
 ```shell
-gaiad query tendermint-validator-set | grep "$(gaiad tendermint show-address)"
+sided query tendermint-validator-set | grep "$(sided tendermint show-address)"
 ```
 
 You should now see your validator in one of SIDE blockchain explorers. You are looking for the bech32 encoded address in the ~/.sidechain/config/priv_validator.json file.
