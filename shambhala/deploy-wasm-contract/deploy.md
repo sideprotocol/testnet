@@ -297,6 +297,26 @@ pagination:
 
 ```
 
+In this example, the contract address is "side14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9scdth4q".
+
+4. Query Contract Info
+```shell
+sided q wasm contract side14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9scdth4q
+address: side14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9scdth4q
+contract_info:
+  admin: side1m8mma95ta2zajqtmfp5c5y3wgeyqzcrc2tddvx
+  code_id: "1"
+  created:
+    block_height: "38071"
+    tx_index: "0"
+  creator: side1m8mma95ta2zajqtmfp5c5y3wgeyqzcrc2tddvx
+  extension: null
+  ibc_port_id: wasm.side14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9scdth4q
+  label: cross chain swap
+```
+
+**Note** : The `ibc_port_id` will be utilized by the relayer to establish an IBC connection with the contracts deployed on other blockchains.
+
 #### Deploy contract on ping.pub (Recommended)
 
 Ping Dashboard offers a user-friendly web UI for interacting with WASM contracts, making it much easier for you to perform such tasks.
