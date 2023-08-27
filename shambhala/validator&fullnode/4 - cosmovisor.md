@@ -26,13 +26,13 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
  - `DAEMON_POLL_INTERVAL` (optional, default = 300ms) is the interval length for polling the upgrade plan file. The value can either be a number (in milliseconds) or a duration (e.g. 1s).
  - `UNSAFE_SKIP_BACKUP` (optional, default = false), if set to true, upgrades directly without performing a backup. Otherwise (false) backs up the data before trying the upgrade. The default value of false is useful and recommended in case of failures and when a backup needed to rollback. We recommend using the default backup option `UNSAFE_SKIP_BACKUP=false`.
 
-To properly set those variables, we suggest you to edit the `~/.profile` file so that they are loaded when you log into your machine. To edit this file you can simply run
+To set these variables correctly, we recommend editing the `~/.profile` file so that they are loaded when you log into your machine. You can use the following command:
 
 ```shell
 nano ~/.profile
 ```
 
-Once you're in, we suggest you to set the following values:
+We recommend that you configure the following values:
 
 ```shell
 export DAEMON_HOME=$HOME/.sided
@@ -42,17 +42,21 @@ export DAEMON_RESTART_AFTER_UPGRADE=true
 export UNSAFE_SKIP_BACKUP=true
 ```
 
-Once you're done, `Ctrl+o` and `Ctrl+x`: To save the file. then reload the `~/.profile` file by running
+After making the necessary changes, press `Ctrl+O` to save the file and then `Ctrl+X` to exit the editor. To apply the changes, reload the `~/.profile` file by running:
 
 ```shell
 source ~/.profile
 ```
-You can verify the values set by running
+You can confirm the values that have been set by executing the following command:
+
+
+
+
 
 ```shell
 echo $DAEMON_NAME
 ```
-If this outputs `sided` you are ready to go.
+If the output of this command is `sided` then you're all set to proceed.
 
 ## Setting up folder structure
 
@@ -68,8 +72,7 @@ Cosmovisor expects a certain folder structure:
         └── bin
             └── $DAEMON_NAME
 ```
-Don't worry about current - that is simply a symlink used by Cosmovisor. The other folders will need setting up, but this is easy:
-
+You don't need to be concerned about the `current` folder as it's merely a symbolic link utilized by Cosmovisor. However, the other directories will require configuration, but this process is straightforward:
 ```shell
 mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades
 ```
@@ -79,14 +82,15 @@ mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor
 cp $HOME/go/bin/sided $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
-You can verify it by running, (You should see version of sided):
+You can verify this by running the following command (you should see the version of `sided`):
+
 ```shell
 cosmovisor version
 ```
 
 ## Starting your node
 ```shell
-cosmovisor start
+cosmovisor run start
 ```
 
 ## Setup Service
