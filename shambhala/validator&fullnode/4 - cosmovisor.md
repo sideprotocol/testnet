@@ -82,7 +82,8 @@ You don't need to be concerned about the `current` folder as it's merely a symbo
 mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades
 ```
 
-## Copy binary to genesis folder
+## Copy `sided` to the genesis folder.
+
 ```shell
 cp $HOME/go/bin/sided $DAEMON_HOME/cosmovisor/genesis/bin
 ```
@@ -103,7 +104,8 @@ First, create the service file:
 ```shell
 sudo nano /etc/systemd/system/sided.service
 ```
-Please copy `cosmovistor` to `/usr/local/bin`, 
+Insert the following content into the `sided.service` file.
+
 ```shell
 [Unit]
 Description=SIDE Blockchain Daemon (cosmovisor)
@@ -123,6 +125,12 @@ Environment="DAEMON_LOG_BUFFER_SIZE=512"
 
 [Install]
 WantedBy=multi-user.target
+```
+> **Note**: We assume you are using the "ubuntu" user. If you prefer to use a different user, please replace "ubuntu" with your desired username.
+
+Secondly, copy `cosmovisor` to `/usr/local/bin`,
+```shell
+sudo cp ~/go/bin/cosmovisor /usr/local/bin
 ```
 
 Finally, enable the service and start it.
