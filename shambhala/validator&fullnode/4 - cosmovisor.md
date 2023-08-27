@@ -4,7 +4,12 @@
 
 # Setup
 ## Installation
+
+1. Downloading the Binary:
+    
 You can download Cosmovisor from the [GitHub releases](https://github.com/cosmos/cosmos-sdk/releases/tag/cosmovisor%2Fv1.5.0).
+
+2. Using `go install`
 
 To install the latest version of cosmovisor, run the following command:
 ```shell
