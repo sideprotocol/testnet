@@ -339,18 +339,24 @@ Once the transaction has succeeded, you will be able to see your code on the was
 
 3. Instantiate Contract
 
-To instantiate a contract, you can click the code hash into the contract list page. then you will see: 
+To instantiate a contract, click on the code hash to access the contract list page. There, you will see:
 <img width="1435" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/7e074aa7-7f2d-410e-b0b6-b5e4380f40d4">
 
 You can click `Instantiate Contract`
 <img width="1433" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/2d8e8482-cb51-4f12-b262-78c81a56d061">
 
-if you see result like this, it means you have instantated the code to a contract.
+If you see a result like this, it indicates that you have successfully instantiated the code into a contract.
 
 <img width="1430" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/21348c85-29d1-4fb7-bccc-6c5c155c43dc">
 
 4. Query Contract State
 
-You can now query all kind of states of the contract:
+You can now query various states of the contract:
+
 <img width="1433" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/eb84c592-e188-4dd5-92ae-523fdbec5584">
+
+## Next
+
+You can now set up a relayer to connect to another blockchain.
+
 
