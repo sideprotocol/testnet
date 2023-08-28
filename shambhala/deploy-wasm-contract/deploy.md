@@ -16,7 +16,7 @@ First, You need to download the latest contract from [github release](https://gi
 ### Deploy contract
 There are two ways to deploy contracts:
 
-#### Deploy contract via the CLI
+### Deploy contract via the CLI
 
 > Here, we are using `sided` as an example to upload the contract to the SIDE blockchain. If you intend to upload it to other blockchains, you can easily substitute `sided` with the name of the respective binary.
 
@@ -317,11 +317,46 @@ contract_info:
 
 **Note** : The `ibc_port_id` will be utilized by the relayer to establish an IBC connection with the contracts deployed on other blockchains.
 
-#### Deploy contract on ping.pub (Recommended)
+### Deploy contract on ping.pub (Recommended)
 
 Ping Dashboard offers a user-friendly web UI for interacting with WASM contracts, making it much easier for you to perform such tasks.
 
 1. Access Ping Dashboard for the testnet.
 
 Open either Google Chrome or Mozilla Firefox web browser. In the address bar, type "[https://testnet.ping.pub]()". Please make sure you have the Keplr Wallet Extension installed, as it's used for signing transactions.
+
+![step1](https://github.com/sideprotocol/testnet/assets/2882920/291dce80-9314-4a72-9011-83f0ba11976a)
+
+You can choose any CosmWasm blockchain listed on this homepage to deploy a contract. We are using SIDE as an example.
+
+2. Upload contract on Cosmwasm Module
+
+You can click the buttons in the order indicated on the screenshot.
+
+<img width="1434" alt="upload" src="https://github.com/sideprotocol/testnet/assets/2882920/427131eb-db48-446c-be04-6ab79872d37e">
+
+Once the transaction has succeeded, you will be able to see your code on the wasm code list. Please note that you might need to reload the page occasionally.
+
+3. Instantiate Contract
+
+To instantiate a contract, click on the code hash to access the contract list page. There, you will see:
+<img width="1435" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/7e074aa7-7f2d-410e-b0b6-b5e4380f40d4">
+
+You can click `Instantiate Contract`
+<img width="1433" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/2d8e8482-cb51-4f12-b262-78c81a56d061">
+
+If you see a result like this, it indicates that you have successfully instantiated the code into a contract.
+
+<img width="1430" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/21348c85-29d1-4fb7-bccc-6c5c155c43dc">
+
+4. Query Contract State
+
+You can now query various states of the contract:
+
+<img width="1433" alt="image" src="https://github.com/sideprotocol/testnet/assets/2882920/eb84c592-e188-4dd5-92ae-523fdbec5584">
+
+## Next
+
+You can now set up a relayer to connect to another blockchain.
+
 
