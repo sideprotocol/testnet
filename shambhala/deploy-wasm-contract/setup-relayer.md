@@ -54,13 +54,15 @@ In order to connect two IBC-enabled chains, both chains need an on-chain client 
 
     - Interchain swap: ICS101
         ```sh
-        hermes create channel --a-chain side-testnet-1 --b-chain osmo-test-5 --a-port "wasm.side1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqs4af7r"  --b-port "wasm.osmo1ekyf3lqyrjep0syhwxgkgqfzqrjthtt83g7lvkmqurlkjxjj45hq8dcag3" --new-client-connection --chan-version "ics101-1"
+        hermes create channel --a-port "wasm.side1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqs4af7r" --b-port "wasm.osmo1ekyf3lqyrjep0syhwxgkgqfzqrjthtt83g7lvkmqurlkjxjj45hq8dcag3" --a-chain side-testnet-1 --a-connection <CONNECTION-A-ID> --chan-version "ics101-1"
         ```
+        Note: `CONNECTION-A-ID` can be used from previous command logs.
 
     - Transfer
         ```sh
-        hermes create channel --a-chain side-testnet-1 --b-chain osmo-test-5 --a-port transfer  --b-port transfer --new-client-connection
+       hermes create channel --a-port transfer --b-port transfer --a-chain side-testnet-1 --a-connection <CONNECTION-A-ID>
         ```
+        Note: `CONNECTION-A-ID` can be used from previous command logs.
 
 > **WARNING**: In production, do not create clients, connections or channels between two chains before checking that a client/connection/channel does not already fulfill the same function.
 
