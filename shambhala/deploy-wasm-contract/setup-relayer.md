@@ -32,7 +32,7 @@ This should display the cargo version and confirm the proper installation.
 ## Install Hermes
 Hermes is packaged in the `ibc-relayer-cli` Rust crate. To install the latest release of Hermes, run the following command in a terminal:
 ```shell
-cargo install ibc-relayer-cli --bin hermes --locked
+cargo install ibc-relayer-cli@1.5.1 --bin hermes --locked
 ```
 You should now be able to run Hermes by invoking the hermes executable.
 ```shell
@@ -41,6 +41,15 @@ hermes version
 
 ## Add a new relay path
 In order to connect two IBC-enabled chains, both chains need an on-chain client that keeps track of the other chain. These two clients can be connected by one or multiple connections. Then, channels need to be created, over a connection, to specify the destination module.
+
+- Use existing connection
+    ```sh
+    hermes create channel --a-port <PORT-ID> --b-port <PORT-ID> --a-chain <CHAIN-A-ID> --a-connection <CONNECTION-A-ID>
+    ```
+- Create new client connection
+    ```sh
+    hermes create channel --a-chain side-testnet-1 --b-chain injective-888 --a-port <a-port>  --b-port <b-port> --new-client-connection --chan-version "ics101-1"
+    ```
 
 > **WARNING**: In production, do not create clients, connections or channels between two chains before checking that a client/connection/channel does not already fulfill the same function.
 
