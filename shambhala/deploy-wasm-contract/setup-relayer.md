@@ -39,6 +39,12 @@ You should now be able to run Hermes by invoking the hermes executable.
 hermes version
 ```
 
+## Initialise Config
+```shell
+mkdir .hermes
+vim .hermes/config.toml
+```
+
 ## Add a new relay path
 In order to connect two IBC-enabled chains, both chains need an on-chain client that keeps track of the other chain. These two clients can be connected by one or multiple connections. Then, channels need to be created, over a connection, to specify the destination module.
 
@@ -57,3 +63,71 @@ Chains allocate identifiers using a chain-specific allocation scheme. Currently,
  - `channel-<n>` for channels.
 
 It is possible for two chains to use the same identifier to designate two different objects. For example, two different channels, one on the Hub and one on Osmosis, can both be designated with the `channel-0` identifier.
+
+## Initialize
+```sh 
+vim ~/.hermes/config.toml
+```
+In this sample, we are setup a relayer which establish a connection between `side-testnet-1` and `osmo-test-5`.
+```toml
+[global]
+log_level = 'info'
+
+[mode]
+
+[mode.clients]
+enabled = true
+refresh = true
+misbehaviour = true
+
+[mode.connections]
+enabled = true
+
+[mode.channels]
+enabled = true
+
+[mode.packets]
+enabled = true
+clear_interval = 100
+clear_on_start = true
+tx_confirmation = true
+
+[telemetry]
+enabled = true
+host = '127.0.0.1'
+port = 3001
+
+[[chains]]
+id = 'side-testnet-1'
+rpc_addr = 'https://testnet-rpc.side.one'
+grpc_addr = 'https://testnet-grpc.side.one'
+event_source = { mode = 'push', url = 'wss://testnet-rpc.side.one/websocket', batch_delay = '500ms' }
+rpc_timeout = '15s'
+account_prefix = 'side'
+key_name = 'wallet'
+store_prefix = 'ibc'
+gas_price = { price = 0.01, denom = 'stake' }
+max_gas = 10000000
+clock_drift = '5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[[chains]]
+id = 'osmo-test-5'
+rpc_addr = 'https://rpc.osmotest5.osmosis.zone'
+grpc_addr = 'https://grpc.osmotest5.osmosis.zone'
+event_source = { mode = 'push', url = 'wss://rpc.osmotest5.osmosis.zone/websocket', batch_delay = '500ms' }
+rpc_timeout = '15s'
+account_prefix = 'osmo'
+key_name = 'wallet'
+store_prefix = 'ibc'
+gas_price = { price = 0.01, denom = 'stake' }
+max_gas = 10000000
+clock_drift = '5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+```
+
+## Create a connection
