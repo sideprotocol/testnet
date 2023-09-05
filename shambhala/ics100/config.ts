@@ -67,7 +67,7 @@ const config = {
       counterparties: [
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-?',
+          sourceChannel: 'channel-1548',
         },
         {
           chainID: 'side-testnet-1',
@@ -96,7 +96,7 @@ const config = {
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-?',
+          sourceChannel: 'channel-104',
         },
         {
           chainID: 'side-testnet-1',
