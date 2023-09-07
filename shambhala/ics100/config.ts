@@ -18,15 +18,19 @@ const config = {
   sideChain: {
     dev: {
       contract:
-        'side1gg6f95cymcfrfzhpek7cf5wl53t5kng52cd2m0krgdlu8k58vd8qzv89wl',
+        'side1kdyjwx6mvnzdv4wvwqpe40wvn7c4w0rtljdvydp7vqee99ss9ves3sry9c',
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-21',
+          sourceChannel: 'channel-30',
         },
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-18',
+          sourceChannel: 'channel-33',
+        },
+        {
+          chainID: 'constantine-3',
+          sourceChannel: 'channel-31',
         },
       ],
     },
@@ -49,15 +53,15 @@ const config = {
   osmoChain: {
     dev: {
       contract:
-        'osmo1ahyxkyz6m7nk774g3x5amfrcznn06fw5zywedxtqg2hw8cgf9gks2rhgnl',
+        'osmo14n40ectsquctcjjqsqqke2anwvdezaf7d80xxpnp8xp4r379ppaqjgtjrg',
       counterparties: [
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-1524',
+          sourceChannel: 'channel-1564',
         },
         {
           chainID: 'side-devnet-1',
-          sourceChannel: 'channel-1523',
+          sourceChannel: 'channel-1562',
         },
       ],
     },
@@ -79,15 +83,15 @@ const config = {
   },
   injective: {
     dev: {
-      contract: 'inj13gttmee75m22058kcnsua3yq8uhk9lwkmyurer',
+      contract: 'inj1tn6axce6dn5cl4uwahg04mc0wvgcu3k5gdwqr0',
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-100',
+          sourceChannel: 'channel-108',
         },
         {
           chainID: 'side-devnet-1',
-          sourceChannel: 'channel-99',
+          sourceChannel: 'channel-107',
         },
       ],
     },
@@ -103,6 +107,20 @@ const config = {
           sourceChannel: 'channel-102',
         },
       ],
+    },
+    main: {},
+  },
+  archway: {
+    dev: {
+      contract: 'archway10nduzug4vd8e3sf3v2frevpn5mytd545rx0wnxjfj20whlrnj2uqzesq87',
+      counterparties: [
+        {
+          chainID: 'side-devnet-1',
+          sourceChannel: 'channel-44',
+        },
+      ],
+    },
+    testnet: {
     },
     main: {},
   },

@@ -20,7 +20,7 @@ const config = {
       },
       testnet: {
         contract:
-        'side1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqs4af7r',
+        'side1pvrwmjuusn9wh34j7y520g8gumuy9xtl3gvprlljfdpwju3x7ucs7ygup0',
         counterparties: [
             {
                 chainID: 'osmo-test-5',
