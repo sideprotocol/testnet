@@ -32,7 +32,7 @@ This should display the cargo version and confirm the proper installation.
 ## Install Hermes
 Hermes is packaged in the `ibc-relayer-cli` Rust crate. To install the latest release of Hermes, run the following command in a terminal:
 ```shell
-cargo install ibc-relayer-cli --bin hermes --locked
+cargo install ibc-relayer-cli@1.5.1 --bin hermes --locked
 ```
 You should now be able to run Hermes by invoking the hermes executable.
 ```shell
@@ -47,6 +47,28 @@ vim .hermes/config.toml
 
 ## Add a new relay path
 In order to connect two IBC-enabled chains, both chains need an on-chain client that keeps track of the other chain. These two clients can be connected by one or multiple connections. Then, channels need to be created, over a connection, to specify the destination module.
+
+- Use existing connection
+    ```sh
+    hermes create channel --a-port <PORT-ID> --b-port <PORT-ID> --a-chain <CHAIN-A-ID> --a-connection <CONNECTION-A-ID>
+    ```
+- Create new client connection
+    - Atomic swap: ICS100
+        ```sh
+        hermes create channel --a-chain side-testnet-1 --b-chain osmo-test-5 --a-port "wasm.side1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfstzz0ej"  --b-port "wasm.osmo18z2ge4vfvnh3wj2yz9f92q9azdrhjf84vct6yzesgcdkp6j2579qxsplh8" --new-client-connection --chan-version "ics100-1"
+        ```
+
+    - Interchain swap: ICS101
+        ```sh
+        hermes create channel --a-port "wasm.side1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqs4af7r" --b-port "wasm.osmo1ekyf3lqyrjep0syhwxgkgqfzqrjthtt83g7lvkmqurlkjxjj45hq8dcag3" --a-chain side-testnet-1 --a-connection <CONNECTION-A-ID> --chan-version "ics101-1"
+        ```
+        Note: `CONNECTION-A-ID` can be used from previous command logs.
+
+    - Transfer
+        ```sh
+       hermes create channel --a-port transfer --b-port transfer --a-chain side-testnet-1 --a-connection <CONNECTION-A-ID>
+        ```
+        Note: `CONNECTION-A-ID` can be used from previous command logs.
 
 > **WARNING**: In production, do not create clients, connections or channels between two chains before checking that a client/connection/channel does not already fulfill the same function.
 
