@@ -36,15 +36,19 @@ const config = {
     },
     testnet: {
       contract:
-        'side1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfstzz0ej',
+        'side1sthrn5ep8ls5vzz8f9gp89khhmedahhdqd244dh9uqzk3hx2pzrsxqeav7',
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-?',
+          sourceChannel: 'channel-14',
         },
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-5',
+          sourceChannel: 'channel-17',
+        },
+        {
+          chainID: 'constantine-3',
+          sourceChannel: 'channel-15',
         },
       ],
     },
@@ -67,15 +71,15 @@ const config = {
     },
     testnet: {
       contract:
-        'osmo18z2ge4vfvnh3wj2yz9f92q9azdrhjf84vct6yzesgcdkp6j2579qxsplh8',
+        'osmo1rput8wzuw06su6cjgju4e9tmp63nq2h5cgfq6pa45qx34skgupestx3t28',
       counterparties: [
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-1548',
+          sourceChannel: 'channel-1566',
         },
         {
           chainID: 'side-testnet-1',
-          sourceChannel: 'channel-?',
+          sourceChannel: 'channel-1560',
         },
       ],
     },
@@ -96,15 +100,15 @@ const config = {
       ],
     },
     testnet: {
-      contract: 'inj1qyvln72dzdadk8jrx45upwjeax55gdaxudxmsc',
+      contract: 'inj152zh4zk4kdw8uxev968yppmtldg9gclgn9262n',
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-104',
+          sourceChannel: 'channel-111',
         },
         {
           chainID: 'side-testnet-1',
-          sourceChannel: 'channel-102',
+          sourceChannel: 'channel-112',
         },
       ],
     },
@@ -121,6 +125,13 @@ const config = {
       ],
     },
     testnet: {
+      contract: 'archway149l2cyyl4klpshy7p9tyzxk5868vpdagx7f9eu5qmp60lmrn26aqy94qnl',
+      counterparties: [
+        {
+          chainID: 'side-devnet-1',
+          sourceChannel: 'channel-42',
+        },
+      ],
     },
     main: {},
   },
