@@ -1,5 +1,6 @@
 # Block Explorer
  - https://explorer.side.one
+ - https://testnet.ping.pub/side
 
 # Faucet
  - https://faucet.side.one
