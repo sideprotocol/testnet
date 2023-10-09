@@ -44,7 +44,7 @@ const config = {
         },
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-17',
+          sourceChannel: 'channel-55',
         },
         {
           chainID: 'constantine-3',
@@ -79,7 +79,7 @@ const config = {
       counterparties: [
         {
           chainID: 'injective-888',
-          sourceChannel: 'channel-1566',
+          sourceChannel: 'channel-3554',
         },
         {
           chainID: 'side-testnet-1',
@@ -104,15 +104,15 @@ const config = {
       ],
     },
     testnet: {
-      contract: 'inj152zh4zk4kdw8uxev968yppmtldg9gclgn9262n',
+      contract: 'inj1t6qx9753wp3exaga2899qc5mztcmxvrnt97a2t',
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-111',
+          sourceChannel: 'channel-124',
         },
         {
           chainID: 'side-testnet-1',
-          sourceChannel: 'channel-112',
+          sourceChannel: 'channel-125',
         },
       ],
     },
