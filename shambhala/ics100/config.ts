@@ -36,11 +36,11 @@ const config = {
     },
     testnet: {
       contract:
-        'side1sthrn5ep8ls5vzz8f9gp89khhmedahhdqd244dh9uqzk3hx2pzrsxqeav7',
+        'side1wtza4twglvyyj9hj2dpax6cruscypaumjwj5gwcpfu58fzyjmsmqzq6dqt',
       counterparties: [
         {
           chainID: 'osmo-test-5',
-          sourceChannel: 'channel-14',
+          sourceChannel: 'channel-52',
         },
         {
           chainID: 'injective-888',
@@ -48,7 +48,11 @@ const config = {
         },
         {
           chainID: 'constantine-3',
-          sourceChannel: 'channel-15',
+          sourceChannel: 'channel-53',
+        },
+        {
+          chainID: 'pion-1',
+          sourceChannel: 'channel-54',
         },
       ],
     },
@@ -71,7 +75,7 @@ const config = {
     },
     testnet: {
       contract:
-        'osmo1rput8wzuw06su6cjgju4e9tmp63nq2h5cgfq6pa45qx34skgupestx3t28',
+        'osmo1d0mzrp3cdyplpl4xd5ek86qdm4ggx9hg5jsvtdvuc8t3qja4hpmq5mmy2m',
       counterparties: [
         {
           chainID: 'injective-888',
@@ -79,7 +83,7 @@ const config = {
         },
         {
           chainID: 'side-testnet-1',
-          sourceChannel: 'channel-1560',
+          sourceChannel: 'channel-1841',
         },
       ],
     },
@@ -125,11 +129,23 @@ const config = {
       ],
     },
     testnet: {
-      contract: 'archway149l2cyyl4klpshy7p9tyzxk5868vpdagx7f9eu5qmp60lmrn26aqy94qnl',
+      contract: 'archway1fvyedz4x5swecjf00z6schhyexzjc9haax7yl7r2j607hgqsc29q9twlng',
       counterparties: [
         {
-          chainID: 'side-devnet-1',
-          sourceChannel: 'channel-42',
+          chainID: 'side-testnet-1',
+          sourceChannel: 'channel-57',
+        },
+      ],
+    },
+    main: {},
+  },
+  neutron: {
+    testnet: {
+      contract: 'neutron1psua4fyjfxkz2xd5n4e98pvxwmw8ak0g9d8cs75c3d28wfgmarwqcr6flr',
+      counterparties: [
+        {
+          chainID: 'side-testnet-1',
+          sourceChannel: 'channel-190',
         },
       ],
     },
