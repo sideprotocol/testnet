@@ -9,7 +9,7 @@ The following instructions assume you have already set up a full-node and are sy
 
 ### Get some SIDE tokens from faucet
 
--  https://faucet.side.one
+-  https://testnet.side.one/faucet
 
 ### check your balances:
 ```shell
