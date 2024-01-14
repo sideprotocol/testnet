@@ -3,7 +3,7 @@
  - https://testnet.ping.pub/side
 
 # Faucet
- - https://faucet.side.one
+ - https://testnet.side.one/faucet
    
 # Endpoint:
  - RPC: https://testnet-rpc.side.one
