@@ -126,3 +126,47 @@ Open `app.toml`, find `minimum-gas-prices`, which defines the minimum gas prices
 sided tendermint unsafe-reset-all 
 sided start
 ```
+Check status:
+```sh
+sided status
+```
+```sh
+{
+    "NodeInfo":{
+        "protocol_version":{
+            "p2p":"8",
+            "block":"11",
+            "app":"0"
+        },
+        "id":"2eba9c8e6fb9d56bbdd10d007a598541c37f6493",
+        "listen_addr":"tcp://0.0.0.0:26656",
+        "network":"side-testnet-1",
+        "version":"0.37.1",
+        "channels":"40202122233038606100",
+        "moniker":"side",
+        "other":{
+            "tx_index":"on",
+            "rpc_address":"tcp://0.0.0.0:26657"
+        }
+    },
+    "SyncInfo":{
+        "latest_block_hash":"B00CEEDD079C673847F99E1DE718109F2A114445DB0C5D5F52E4AAF314B9C8B7",
+        "latest_app_hash":"9E86219F61A7CC188DD4CB00B03B453975E04A56076C055DF54B53ED243054F5",
+        "latest_block_height":"2566387",
+        "latest_block_time":"2024-01-18T07:24:33.17990802Z",
+        "earliest_block_hash":"C88B44EF56ADFBAC04858F7016D0FD238D0ED90FC19336A2B45B164DAA521BF4",
+        "earliest_app_hash":"E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "earliest_block_height":"1",
+        "earliest_block_time":"2023-08-19T07:17:58.100481172Z",
+        "catching_up":false
+    },
+    "ValidatorInfo":{
+        "Address":"1DA4375220D4F8A578E6EA123E2B8CA995294DF4",
+        "PubKey":{
+            "type":"tendermint/PubKeyEd25519",
+            "value":"FpGF3a/GimqEDxg4rQsX8CntMJxI2hwoDNLj4x2zZWQ="
+        },
+        "VotingPower":"1800000101422"
+    }
+}
+```
