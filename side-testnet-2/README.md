@@ -29,4 +29,8 @@ seed node
 d9911bd0eef9029e8ce3263f61680ef4f71a87c413.230.121.124:26656,693bdfec73a81abddf6f758aa49321de48456a96@13.231.67.192:26656
 ```
 
-## faucet 
+## Faucet 
+
+- Web Interface
+https://faucet.side.one
+- Discord channel
