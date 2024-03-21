@@ -6,7 +6,7 @@ In this testnet environment, developers and users can experiment with Native Seg
 
 We encourage developers, testers and blockchain enthusiasts to join us in exploring the capabilities of Native SegWit Bitcoin addresses on SIDE and providing valuable feedback to enhance the interoperability and functionality of our blockchain ecosystem.
 
-SIDE-Testnet-3 is set to be launched in a decentralized manner, with gentx submissions accepted from now until next Monday (UTC 14:00, March 25). The genesis block is planned to start at 15:00 UTC. Join us in this exciting launch and contribute to the success of SIDE-Testnet-3!
+SIDE-Testnet-3 is set to be launched in a decentralized manner, with gentx submissions accepted from now until next Tuesday (UTC 14:00, March 26). The genesis block is planned to start at 15:00 UTC. Join us in this exciting launch and contribute to the success of SIDE-Testnet-3!
 
 # Gentx Submission
 
