@@ -46,9 +46,10 @@ else
     echo "GentxFile::::"
     echo $GENTX_FILE
 
-    echo "...........Init Osmosis.............."
+    echo "...........Init Sided.............."
 
-    git clone https://github.com/sideprotocol/side
+    rm -rf side
+    git clone https://github.com/sideprotocol/side.git
     cd side
     git checkout v0.7.0-rc0
     make build
@@ -86,24 +87,30 @@ else
         exit 1
     fi
 
-    ./build/sided add-genesis-account $RANDOM_KEY 100000000000000$DENOM --home $APP_HOME \
+    ./build/sided add-genesis-account $GENACC $amountquery$DENOM --home $APP_HOME \
         --keyring-backend test
 
+    ./build/sided add-genesis-account $RANDOM_KEY 10000000000000000$DENOM --home $APP_HOME \
+        --keyring-backend test
+
+    #./build/sided add-genesis-account  $amountquery$DENOM --home $APP_HOME \
+    #    --keyring-backend test
     ./build/sided gentx $RANDOM_KEY 90000000000000$DENOM --home $APP_HOME \
         --keyring-backend test --chain-id $CHAIN_ID
 
+    # rm $APP_HOME/config/gentx/*.json
     cp ../$GENTX_FILE $APP_HOME/config/gentx/
 
     echo "..........Collecting gentxs......."
     ./build/sided collect-gentxs --home $APP_HOME
-    sed -i '/persistent_peers =/c\persistent_peers = ""' $APP_HOME/config/config.toml
+    # sed -i '/persistent_peers =/c\persistent_peers = ""' $APP_HOME/config/config.toml
 
     ./build/sided validate-genesis --home $APP_HOME
 
     echo "..........Starting node......."
     ./build/sided start --home $APP_HOME &
 
-    sleep 1800s
+    sleep 18s
 
     echo "...checking network status.."
 
