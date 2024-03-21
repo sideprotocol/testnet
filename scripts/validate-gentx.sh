@@ -8,6 +8,9 @@ MAXBOND=50000000000000 # 500 Million OSMO
 GENTX_FILE=$(find ./$CHAIN_ID/gentxs -iname "*.json")
 LEN_GENTX=$(echo ${#GENTX_FILE})
 
+# Install JQ
+sudo apt install jq -y
+
 # Gentx Start date
 start="2024-03-03 15:00:00Z"
 # Compute the seconds since epoch for start date
