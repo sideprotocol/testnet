@@ -33,29 +33,7 @@
         "sig_verify_cost_ed25519": "590",
         "sig_verify_cost_secp256k1": "1000"
       },
-      "accounts": [
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "bc1xlzt9jff5glusw22e2zdya4ylj9yajrexumzlu",
-          "pub_key": null,
-          "account_number": "0",
-          "sequence": "0"
-        },
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "bc1kc66r6kgalx8zjnyqwdmpvt4zugq9xsfx5ptk5",
-          "pub_key": null,
-          "account_number": "1",
-          "sequence": "0"
-        },
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "bc1tf78khc6dmhwg8fqqfh5wvhhvdgcpwfzdpazfe",
-          "pub_key": null,
-          "account_number": "2",
-          "sequence": "0"
-        }
-      ]
+      "accounts": []
     },
     "authz": {
       "authorization": []
@@ -65,57 +43,8 @@
         "send_enabled": [],
         "default_send_enabled": true
       },
-      "balances": [
-        {
-          "address": "bc1xlzt9jff5glusw22e2zdya4ylj9yajrexumzlu",
-          "coins": [
-            {
-              "denom": "uside",
-              "amount": "100000000000000000000"
-            },
-            {
-              "denom": "uusdc",
-              "amount": "100000000000000000000"
-            }
-          ]
-        },
-        {
-          "address": "bc1tf78khc6dmhwg8fqqfh5wvhhvdgcpwfzdpazfe",
-          "coins": [
-            {
-              "denom": "uside",
-              "amount": "100000000000000000000"
-            },
-            {
-              "denom": "uusdc",
-              "amount": "100000000000000000000"
-            }
-          ]
-        },
-        {
-          "address": "bc1kc66r6kgalx8zjnyqwdmpvt4zugq9xsfx5ptk5",
-          "coins": [
-            {
-              "denom": "uside",
-              "amount": "100000000000000000000"
-            },
-            {
-              "denom": "uusdc",
-              "amount": "100000000000000000000"
-            }
-          ]
-        }
-      ],
-      "supply": [
-        {
-          "denom": "uside",
-          "amount": "300000000000000000000"
-        },
-        {
-          "denom": "uusdc",
-          "amount": "300000000000000000000"
-        }
-      ],
+      "balances": [],
+      "supply": [],
       "denom_metadata": [],
       "send_enabled": []
     },
@@ -162,9 +91,6 @@
       "registered_counterparty_payees": [],
       "forward_relayers": []
     },
-    "feemarket": {
-      "block_gas": "10000000"
-    },
     "genutil": {
       "gen_txs": []
     },
@@ -173,19 +99,13 @@
       "deposits": [],
       "votes": [],
       "proposals": [],
-      "deposit_params": {
-        "min_deposit": [
-          {
-            "denom": "uside"
-          }
-        ]
-      },
+      "deposit_params": null,
       "voting_params": null,
       "tally_params": null,
       "params": {
         "min_deposit": [
           {
-            "denom": "stake",
+            "denom": "uside",
             "amount": "10000000"
           }
         ],
@@ -271,7 +191,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "stake",
+        "mint_denom": "uside",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
