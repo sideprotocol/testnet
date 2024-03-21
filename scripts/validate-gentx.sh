@@ -66,7 +66,7 @@ else
     # this genesis time is different from original genesis time, just for validating gentx.
     sed -i '/genesis_time/c\   \"genesis_time\" : \"2021-03-29T00:00:00Z\",' $APP_HOME/config/genesis.json
 
-    GENACC=$(cat ../$GENTX_FILE | sed -n 's|.*"delegator_address":"\([^"]*\)".*|\1|p')
+    GENACC=$(cat $GENTX_FILE | sed -n 's|.*"delegator_address":"\([^"]*\)".*|\1|p')
     denomquery=$(jq -r '.body.messages[0].value.denom' ../$GENTX_FILE)
     amountquery=$(jq -r '.body.messages[0].value.amount' ../$GENTX_FILE)
 
@@ -99,7 +99,7 @@ else
         --keyring-backend test --chain-id $CHAIN_ID
 
     # rm $APP_HOME/config/gentx/*.json
-    cp ../$GENTX_FILE $APP_HOME/config/gentx/
+    cp $GENTX_FILE $APP_HOME/config/gentx/
 
     echo "..........Collecting gentxs......."
     ./build/sided collect-gentxs --home $APP_HOME
