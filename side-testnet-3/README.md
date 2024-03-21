@@ -44,7 +44,11 @@ Certainly! Here's a tutorial with the commands:
    ~/go/bin/sided init YourName --chain-id side-testnet-3
    ```
 
-3. Add your account to the genesis file with an initial balance (e.g., 100000000uside):
+3. Download the pregenesis.json
+   ```sh
+   wget https://github.com/sideprotocol/testnet/raw/main/side-testnet-3/pregenesis.json -O ~/.side/config/genesis.json
+   ```
+4. Add your account to the genesis file with an initial balance (e.g., 100000000uside):
    ```sh
    ~/go/bin/sided add-genesis-account YourName 100000000uside
    ```
