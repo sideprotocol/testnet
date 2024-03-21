@@ -33,7 +33,15 @@
         "sig_verify_cost_ed25519": "590",
         "sig_verify_cost_secp256k1": "1000"
       },
-      "accounts": []
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "bc1h3u9zgfdfkycuh0lna4qua6g8nhuu0gmeycrd4",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      ]
     },
     "authz": {
       "authorization": []
@@ -43,7 +51,17 @@
         "send_enabled": [],
         "default_send_enabled": true
       },
-      "balances": [],
+      "balances": [
+        {
+          "address": "bc1h3u9zgfdfkycuh0lna4qua6g8nhuu0gmeycrd4",
+          "coins": [
+            {
+              "denom": "uside",
+              "amount": "2000000000"
+            }
+          ]
+        }
+      ],
       "supply": [],
       "denom_metadata": [],
       "send_enabled": []
@@ -199,12 +217,6 @@
         "blocks_per_year": "6311520"
       }
     },
-    "packetfowardmiddleware": {
-      "params": {
-        "fee_percentage": "0.000000000000000000"
-      },
-      "multi_hops_packets": {}
-    },
     "params": null,
     "slashing": {
       "params": {
@@ -249,7 +261,6 @@
       "params": {
         "code_upload_access": {
           "permission": "Everybody",
-          "address": "",
           "addresses": []
         },
         "instantiate_default_permission": "Everybody"
