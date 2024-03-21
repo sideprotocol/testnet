@@ -12,4 +12,4 @@ jobs:
       - name: pwd
         run: pwd
       - name: Validating...
-        run: ./script/validate-gentx.sh
+        run: ./scripts/validate-gentx.sh
