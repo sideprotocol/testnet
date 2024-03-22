@@ -36,8 +36,8 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "bc1h3u9zgfdfkycuh0lna4qua6g8nhuu0gmeycrd4",
-          "pub_key": null,
+          "address": "bc1scm2269n0ysnnsjgrpt5hvl3k356umz2l497zl",
+          "pub_key": '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AjJ/nMaaQqAxrmZBWmqERv9v/siBSU37Wb5A3LRjgtPO"}',
           "account_number": "0",
           "sequence": "0"
         }
@@ -53,7 +53,7 @@
       },
       "balances": [
         {
-          "address": "bc1h3u9zgfdfkycuh0lna4qua6g8nhuu0gmeycrd4",
+          "address": "bc1scm2269n0ysnnsjgrpt5hvl3k356umz2l497zl",
           "coins": [
             {
               "denom": "uside",
