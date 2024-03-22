@@ -59,12 +59,12 @@ else
 
     ./build/sided init --chain-id $CHAIN_ID validator --home $APP_HOME
 
-    echo "..........Fetching genesis......."
-    rm -rf $APP_HOME/config/genesis.json
-    curl -s https://raw.githubusercontent.com/sideprotocol/testnet/main/$CHAIN_ID/pregenesis.json >$APP_HOME/config/genesis.json
+    # echo "..........Fetching genesis......."
+    # rm -rf $APP_HOME/config/genesis.json
+    # curl -s https://raw.githubusercontent.com/sideprotocol/testnet/main/$CHAIN_ID/pregenesis.json >$APP_HOME/config/genesis.json
 
     # this genesis time is different from original genesis time, just for validating gentx.
-    sed -i '/genesis_time/c\   \"genesis_time\" : \"2021-03-29T00:00:00Z\",' $APP_HOME/config/genesis.json
+    # sed -i '/genesis_time/c\   \"genesis_time\" : \"2021-03-29T00:00:00Z\",' $APP_HOME/config/genesis.json
 
     GENACC=$(cat $GENTX_FILE | sed -n 's|.*"delegator_address":"\([^"]*\)".*|\1|p')
     denomquery=$(jq -r '.body.messages[0].value.denom' ../$GENTX_FILE)
