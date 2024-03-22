@@ -51,7 +51,7 @@ else
     rm -rf side
     git clone https://github.com/sideprotocol/side.git
     cd side
-    git checkout v0.7.0-rc0
+    git checkout v0.7.0-rc2
     make build
     chmod +x ./build/sided
 
