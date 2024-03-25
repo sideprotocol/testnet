@@ -2,6 +2,8 @@ name: validate-gentx
 on:
   pull_request:
     # branches: [dev]
+  push:
+    # main
 jobs:
   build:
     name: Validating
