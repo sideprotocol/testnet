@@ -46,7 +46,7 @@ version: 0.7.0
 sided start
 ```
 
-Now you have to wait; the blockchain will start at the genesis time.
+Now you have to wait; the blockchain will start at the genesis time (UTC 15:00, March 26).
 
 
 # Gentx Submission
