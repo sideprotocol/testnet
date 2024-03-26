@@ -27,7 +27,7 @@ Expected output:
 2e908a79fee2c70c93b41eba3842106f8370b1cf  genesis.json
 ```
 
-3. Set up seeds for the network:
+3. Set up seeds:
 ```sh
 00170c0c23c3e97c740680a7f881511faf68289a@202.182.119.24:26656
 ```
