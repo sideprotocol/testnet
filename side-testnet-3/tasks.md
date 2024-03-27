@@ -20,7 +20,7 @@ sided keys add segwit --key-type=segwit
 
 ### Create Taproot Address
 ```sh
-sided keys add segwit --key-type=taproot
+sided keys add taproot --key-type=taproot
 ```
 ```yaml
 - address: bc1p5cyxnuxmeuwuvkwfem96lqzszd02n6xdcjrs20cac6yqjjwudpxqkedrcr
