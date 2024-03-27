@@ -8,6 +8,47 @@ We encourage developers, testers and blockchain enthusiasts to join us in explor
 
 SIDE-Testnet-3 is set to be launched in a decentralized manner, with gentx submissions accepted from now until next Tuesday (UTC 14:00, March 26). The genesis block is planned to start at 15:00 UTC. Join us in this exciting launch and contribute to the success of SIDE-Testnet-3!
 
+
+# Launch
+
+Here's your tutorial with the commands formatted for clarity:
+
+1. Download the genesis file:
+```sh
+wget https://github.com/sideprotocol/testnet/raw/main/side-testnet-3/genesis.json -O ~/.side/config/genesis.json
+```
+
+2. Verify the SHA256 hash of the downloaded genesis file:
+```sh
+shasum -a 256 ~/.side/config/genesis.json
+```
+Expected output:
+```
+f5ca2aea92a89449f96b9837a027667409378583d7ca8a5bf6e49e4211b93184  genesis.json
+```
+
+3. Set up seeds:
+```sh
+00170c0c23c3e97c740680a7f881511faf68289a@202.182.119.24:26656
+```
+
+4. Start your node:
+```sh
+sided version
+commit: 888e3d1bb860b9cb1d4d2e6cb16774fbfc5a0893
+cosmos_sdk_version: v0.47.9
+go: go version go1.22.1 linux/amd64
+name: sidechain
+server_name: sided
+version: 0.7.0
+```
+```sh
+sided start
+```
+
+Now you have to wait; the blockchain will start at the genesis time (UTC 15:00, March 26).
+
+
 # Gentx Submission
 
 Certainly! Here's a tutorial with the commands:
