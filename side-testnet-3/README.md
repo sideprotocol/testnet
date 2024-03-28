@@ -118,3 +118,7 @@ Certainly! Here's a tutorial with the commands:
 4. Create a pull request to the sideprotocol/testnet repository.
 
 By following these steps, you'll be able to contribute your genesis transaction to SIDE-Testnet-3 successfully.
+
+## Links
+ - https://testnet.ping.pub/side
+ - https://faucet.side.one
