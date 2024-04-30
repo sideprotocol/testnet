@@ -56,3 +56,21 @@ version: 0.8.0
 ```sh
 sided start
 ```
+
+# Validating
+
+1. add a **Bitcoin Segwit Address**
+```sh
+ sided keys add test --key-type segwit
+
+- address: bc1q0xm60dd99hucpkux7rq6vr57g7k479nlw0xapt
+  name: test
+  pubkey: '{"@type":"/cosmos.crypto.segwit.PubKey","key":"A6gxg+M4sEu0MBFiYlj4r2fEaz/ueeaNE7ymf8Zx+Tqq"}'
+  type: local
+```
+
+**Note:**
+Please ensure that you use a Segwit address; otherwise, you will not be able to claim your rewards.
+
+
+
