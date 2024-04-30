@@ -1,6 +1,27 @@
 # S2-testnet-1
 
+## Cloning SIDE Repository and Setup
+1. Clone the SIDE repository:
+   ```sh
+   git clone https://github.com/sideprotocol/side.git
+   ```
 
+2. Checkout to the desired version (e.g., v0.8.0):
+   ```sh
+   git checkout v0.8.0
+   ```
+
+3. Move to the SIDE directory:
+   ```sh
+   cd side
+   ```
+
+4. Install SIDE:
+   ```sh
+   make install
+   ```
+
+# Launch
 Here's your tutorial with the commands formatted for clarity:
 
 1. Download the genesis file:
@@ -25,7 +46,7 @@ b6ff2dd83a552632e22803941c7d86085b1368d8a37c5414ccf8f39bcd6038c4  genesis.json
 4. Start your node:
 ```sh
 sided version
-commit: 888e3d1bb860b9cb1d4d2e6cb16774fbfc5a0893
+commit: a6094f66251b704c59d07c769286d5091b8e75ec
 cosmos_sdk_version: v0.47.9
 go: go version go1.22.1 linux/amd64
 name: sidechain
