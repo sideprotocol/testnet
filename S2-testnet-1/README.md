@@ -59,7 +59,7 @@ sided start
 
 # Validating
 
-1. add a **Bitcoin Segwit Address**
+1. Add a **Bitcoin Segwit Address**
 ```sh
  sided keys add test --key-type segwit
 
@@ -72,5 +72,18 @@ sided start
 **Note:**
 Please ensure that you use a Segwit address; otherwise, you will not be able to claim your rewards.
 
-
+2. Create Validator
+```sh
+sided tx staking create-validator \
+--from=test \
+--amount=400000000uside \
+--pubkey=$(sided tendermint show-validator)  \
+--moniker="side_node" \
+--security-contact="contact@side.one" \
+--chain-id="S2-testnet-1" \
+--commission-rate="0.1" \
+--commission-max-rate="0.2" \
+--commission-max-change-rate="0.05" \
+--min-self-delegation="400000000" \
+```
 
