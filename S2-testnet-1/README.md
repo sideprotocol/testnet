@@ -8,7 +8,7 @@
 
 2. Checkout to the desired version (e.g., v0.8.0):
    ```sh
-   git checkout v0.8.0
+   git checkout v0.8.1
    ```
 
 3. Move to the SIDE directory:
@@ -46,12 +46,12 @@ Expected output:
 4. Start your node:
 ```sh
 sided version
-commit: a6094f66251b704c59d07c769286d5091b8e75ec
+commit: 22e123457317f8edc949739c7310ea991b7a8100
 cosmos_sdk_version: v0.47.9
-go: go version go1.22.1 linux/amd64
+go: go version go1.22.0 linux/amd64
 name: sidechain
 server_name: sided
-version: 0.8.0
+version: 0.8.1
 ```
 ```sh
 sided start
