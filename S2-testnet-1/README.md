@@ -6,7 +6,7 @@
    git clone https://github.com/sideprotocol/side.git
    ```
 
-2. Checkout to the desired version (e.g., v0.8.0):
+2. Checkout to the desired version:
    ```sh
    git checkout v0.8.1
    ```
