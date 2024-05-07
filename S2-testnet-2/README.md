@@ -40,7 +40,7 @@ Expected output:
 
 3. Set up seeds:
 ```sh
-582dedd866dd77f25ac0575118cf32df1ee50f98@202.182.119.24:26656
+2b2ad344919d591cad2af6fe1b88e51fb02e926b@202.182.119.24:26656
 ```
 
 4. Start your node:
