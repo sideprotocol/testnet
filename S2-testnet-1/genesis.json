@@ -63,7 +63,7 @@
           "address": "bc1qqrrjjkn8ahj6xmm0l29x3atclp6tjfy2ph4ydu",
           "coins": [
             {
-              "denom": "ubtct",
+              "denom": "abtct",
               "amount": "500000000000000"
             },
             {
@@ -112,7 +112,7 @@
           "address": "bc1qejdykp78v0xpufxtc3r5axcasr7yk4n6w2x9e2",
           "coins": [
             {
-              "denom": "ubtct",
+              "denom": "abtct",
               "amount": "500000000000000"
             },
             {
