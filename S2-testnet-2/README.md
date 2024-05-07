@@ -80,10 +80,14 @@ sided tx staking create-validator \
 --pubkey=$(sided tendermint show-validator)  \
 --moniker="side_node" \
 --security-contact="contact@side.one" \
---chain-id="S2-testnet-1" \
+--chain-id="S2-testnet-2" \
 --commission-rate="0.1" \
 --commission-max-rate="0.2" \
 --commission-max-change-rate="0.05" \
 --min-self-delegation="10000000" \
+--gas auto \
+--gas-adjustment 1.5 \
+--fees 500uside \
+--y
 ```
 
