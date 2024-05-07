@@ -1,6 +1,6 @@
 {
   "genesis_time": "2024-04-30T10:46:52.806888105Z",
-  "chain_id": "S2-testnet-2",
+  "chain_id": "S2-testnet-1",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -63,7 +63,7 @@
           "address": "bc1qqrrjjkn8ahj6xmm0l29x3atclp6tjfy2ph4ydu",
           "coins": [
             {
-              "denom": "abtct",
+              "denom": "ubtct",
               "amount": "500000000000000"
             },
             {
@@ -112,7 +112,7 @@
           "address": "bc1qejdykp78v0xpufxtc3r5axcasr7yk4n6w2x9e2",
           "coins": [
             {
-              "denom": "abtct",
+              "denom": "ubtct",
               "amount": "500000000000000"
             },
             {
