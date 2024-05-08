@@ -5,15 +5,14 @@
    ```sh
    git clone https://github.com/sideprotocol/side.git
    ```
-
-2. Checkout to the desired version:
-   ```sh
-   git checkout v0.8.1
-   ```
-
-3. Move to the SIDE directory:
+2. Move to the SIDE directory:
    ```sh
    cd side
+   ```
+   
+3. Checkout to the desired version:
+   ```sh
+   git checkout v0.8.1
    ```
 
 4. Install SIDE:
