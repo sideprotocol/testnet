@@ -1,24 +1,24 @@
 # grimoria-testnet-1
 
-> NOTE: Please remove previous git working directory (side) on your local and re-clone the repository. 
-
 ## Cloning SIDE Repository and Setup
 1. Clone the SIDE repository:
+   > NOTE: Please remove previous git working directory (side) on your local and re-clone the repository. 
+
    ```sh
    git clone https://github.com/sideprotocol/side.git
    ```
 
-2. Checkout to the desired version:
+3. Checkout to the desired version:
    ```sh
    git checkout v0.9.0
    ```
 
-3. Move to the SIDE directory:
+4. Move to the SIDE directory:
    ```sh
    cd side
    ```
 
-4. Install SIDE:
+5. Install SIDE:
    ```sh
    make install
    ```
