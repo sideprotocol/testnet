@@ -48,12 +48,14 @@ xxxx  genesis.json
 4. Start your node:
 ```sh
 sided version
-commit: 22e123457317f8edc949739c7310ea991b7a8100
-cosmos_sdk_version: v0.47.9
-go: go version go1.22.0 linux/amd64
+```
+```sh
+commit: f8f3845abd73d6307223f3a6fd5b340990595fce
+cosmos_sdk_version: v0.47.5
+go: go version go1.22.5 linux/amd64
 name: sidechain
 server_name: sided
-version: 0.8.1
+version: 0.9.0
 ```
 ```sh
 sided start
