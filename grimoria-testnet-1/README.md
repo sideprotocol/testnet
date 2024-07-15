@@ -40,10 +40,16 @@ Expected output:
 0d3a447b869cf985d8abd632026558a6d49a5a43066fe57e457b7e3bebc087f6  genesis.json
 ```
 
-3. Set up seeds:
+3. Set up persistence_peer:
 ```sh
-6bef0693d7a31fed473b95123ad19b544b414093@202.182.119.24:26656
+6bef0693d7a31fed473b95123ad19b544b414093@202.182.119.24:26656,44f8009ed91fddd7ee51117482ede20fb4f33e78@149.28.156.79:26656
 ```
+
+*Community Peers*
+```sh
+# please add your peer here.
+```
+
 
 4. Start your node:
 ```sh
