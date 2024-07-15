@@ -1,1 +1,0 @@
-# grimoria-testnet-1
