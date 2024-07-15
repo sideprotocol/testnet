@@ -37,7 +37,7 @@ shasum -a 256 ~/.side/config/genesis.json
 ```
 Expected output:
 ```
-xxxx  genesis.json
+0d3a447b869cf985d8abd632026558a6d49a5a43066fe57e457b7e3bebc087f6  genesis.json
 ```
 
 3. Set up seeds:
