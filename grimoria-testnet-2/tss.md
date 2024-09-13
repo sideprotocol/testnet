@@ -142,3 +142,71 @@ or start by default
 ```
 shuttler --home <home> start
 ```
+
+### Hardware Specifications
+
+#### Standalone TSS node
+
+1. Minimum Requirements
+
+   - CPU: 4 cores
+
+   - RAM: 8 GB
+
+   - Storage: 100 GB
+
+   - Network: 1 Gbps
+
+2. Recommended Specifications
+
+   - CPU: 8 cores
+
+   - RAM: 16 GB
+
+   - Storage: 500 GB
+
+   - Network: 1 Gbps
+
+#### Standalone Bitcoin testnet3 node
+
+1. Minimum Requirements
+
+   - CPU: 4 cores
+
+   - RAM: 8 GB
+
+   - Storage: 200 GB
+
+   - Network: 1 Gbps
+
+2. Recommended Specifications
+
+   - CPU: 8 cores
+
+   - RAM: 16 GB
+
+   - Storage: 500 GB
+
+   - Network: 1 Gbps
+
+### Run both TSS and Bitcoin nodes
+
+1. Minimum Requirements
+
+   - CPU: 4 cores
+
+   - RAM: 8 GB
+
+   - Storage: 200 GB
+
+   - Network: 1 Gbps
+
+2. Recommended Specifications
+
+   - CPU: 8 cores
+
+   - RAM: 16 GB
+
+   - Storage: 500 GB
+
+   - Network: 1 Gbps
