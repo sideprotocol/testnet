@@ -189,7 +189,7 @@ shuttler --home <home> start
 
    - Network: 1 Gbps
 
-### Running both the TSS node and Bitcoin Testnet3 full node
+#### Running both the TSS node and Bitcoin Testnet3 full node
 
 1. Minimum Requirements
 
