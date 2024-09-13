@@ -145,7 +145,7 @@ shuttler --home <home> start
 
 ### Hardware Specifications
 
-#### Standalone TSS node
+#### Running only the TSS node
 
 1. Minimum Requirements
 
@@ -167,7 +167,7 @@ shuttler --home <home> start
 
    - Network: 1 Gbps
 
-#### Standalone Bitcoin testnet3 node
+#### Running only the Bitcoin Testnet3 full node
 
 1. Minimum Requirements
 
@@ -189,7 +189,7 @@ shuttler --home <home> start
 
    - Network: 1 Gbps
 
-### Run both TSS and Bitcoin nodes
+### Running both the TSS node and Bitcoin Testnet3 full node
 
 1. Minimum Requirements
 
@@ -210,3 +210,6 @@ shuttler --home <home> start
    - Storage: 500 GB
 
    - Network: 1 Gbps
+
+**Note**: To ensure service quality, we strongly recommend not running the Side Chain validator node on any of the machines listed above.
+
