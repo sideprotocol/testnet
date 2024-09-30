@@ -24,9 +24,9 @@ The DKG procedure is as follows:
 
 Signing is the regular task for TSS nodes.
 
-1. Signing requests are fetched from the Side chain by the coordinator selected by the TSS network periodically.
+1. Signing requests are fetched from the Side chain by the TSS node periodically.
 
-2. Sign the requests when signing requests received from the TSS network.
+2. Sign the requests and broadcast the related messages when signing requests are received.
 
 ## Relaying
 
@@ -96,21 +96,39 @@ If you run own Side node on the same server, the item can be set to `http://loca
 
 ```
 [bitcoin]
-rpc = <rpc address>
+network = <network name>
+rpc = <rpc endpoint>
 user = <rpc username>
 password = <rpc password>
 ```
 
 For signers and relayers, the bitcoin node rpc is required to send the signed transactions or sync the bitcoin block headers and the bridge related transactions to the Side chain.
 
-In the Side testnet phase 3, the corresponding bitcoin network is `testnet3`. The TSS node operator can deploy own bitcoin node or use the third-party server provider by demand.
+In the Side testnet phase 3, the corresponding bitcoin network is `testnet3`. For testnet3, the network name is `testnet` and defaut port is `18332`.
+
+The TSS node operator can deploy own bitcoin node or use the third-party server provider by demand.
+
+The public bitcoin node information provided by Side Labs is as follows:
+
+```
+network = testnet
+rpc = http://192.248.150.102:18332
+user = side
+password = 12345678
+```
+
+**_Note_**: The `--txindex` is required to be set when starting the Bitcoin node as following:
+
+```
+bitcoind -txindex -rpcuser=<user> --rpcpassword=<password>
+```
 
 ### Fund the relayer address
 
 The relayer(Side transaction sender) address can be viewed by the following command:
 
 ```
-shuttler --home <home> addresses
+shuttler --home <home> address
 ```
 
 **Note**: Before starting the TSS node, the sender address needs to be funded for sending the transactions to the Side chain.
