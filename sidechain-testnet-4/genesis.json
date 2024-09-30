@@ -1,0 +1,442 @@
+{
+    "genesis_time": "2024-09-30T22:21:21.202325223Z",
+    "chain_id": "sidechain-testnet-4",
+    "initial_height": "1",
+    "consensus_params": {
+      "block": {
+        "max_bytes": "22020096",
+        "max_gas": "10000000000"
+      },
+      "evidence": {
+        "max_age_num_blocks": "100000",
+        "max_age_duration": "172800000000000",
+        "max_bytes": "1048576"
+      },
+      "validator": {
+        "pub_key_types": [
+          "ed25519"
+        ]
+      },
+      "version": {
+        "app": "0"
+      }
+    },
+    "app_hash": "",
+    "app_state": {
+      "06-solomachine": null,
+      "07-tendermint": null,
+      "auth": {
+        "params": {
+          "max_memo_characters": "256",
+          "tx_sig_limit": "7",
+          "tx_size_cost_per_byte": "10",
+          "sig_verify_cost_ed25519": "590",
+          "sig_verify_cost_secp256k1": "1000"
+        },
+        "accounts": [
+          {
+            "@type": "/cosmos.auth.v1beta1.BaseAccount",
+            "address": "tb1q6wp6nhw9qyw2x9ecgfjjw3ewshadrzqs3qhrv7",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          {
+            "@type": "/cosmos.auth.v1beta1.BaseAccount",
+            "address": "tb1qtxs4c6dj5g8m6d2zx2qqm0v09p3djdn0v37h8s",
+            "pub_key": null,
+            "account_number": "1",
+            "sequence": "0"
+          },
+          {
+            "@type": "/cosmos.auth.v1beta1.BaseAccount",
+            "address": "tb1qcr8te4kr609gcawutmrza0j4xv80jy8zmfp6l0",
+            "pub_key": null,
+            "account_number": "2",
+            "sequence": "0"
+          }
+        ]
+      },
+      "authz": {
+        "authorization": []
+      },
+      "bank": {
+        "params": {
+          "send_enabled": [],
+          "default_send_enabled": true
+        },
+        "balances": [
+          {
+            "address": "tb1qtxs4c6dj5g8m6d2zx2qqm0v09p3djdn0v37h8s",
+            "coins": [
+              {
+                "denom": "uside",
+                "amount": "500000000000000"
+              },
+              {
+                "denom": "uusdc",
+                "amount": "500000000000000"
+              },
+              {
+                "denom": "uusdt",
+                "amount": "500000000000000"
+              }
+            ]
+          },
+          {
+            "address": "tb1qcr8te4kr609gcawutmrza0j4xv80jy8zmfp6l0",
+            "coins": [
+              {
+                "denom": "uside",
+                "amount": "500000000000000"
+              },
+              {
+                "denom": "uusdc",
+                "amount": "500000000000000"
+              },
+              {
+                "denom": "uusdt",
+                "amount": "500000000000000"
+              }
+            ]
+          },
+          {
+            "address": "tb1q6wp6nhw9qyw2x9ecgfjjw3ewshadrzqs3qhrv7",
+            "coins": [
+              {
+                "denom": "uside",
+                "amount": "500000000000000"
+              },
+              {
+                "denom": "uusdc",
+                "amount": "500000000000000"
+              },
+              {
+                "denom": "uusdt",
+                "amount": "500000000000000"
+              }
+            ]
+          }
+        ],
+        "supply": [],
+        "denom_metadata": [],
+        "send_enabled": []
+      },
+      "btcbridge": {
+        "params": {
+          "confirmations": 1,
+          "max_acceptable_block_depth": "100",
+          "btc_voucher_denom": "sat",
+          "deposit_enabled": true,
+          "withdraw_enabled": true,
+          "trusted_non_btc_relayers": [
+            "tb1qmmj6a5hdjr9k00q763eanvpplssc5q9unssagv"
+          ],
+          "trusted_oracles": [
+            "tb1qmmj6a5hdjr9k00q763eanvpplssc5q9unssagv"
+          ],
+          "vaults": [],
+          "withdraw_params": {
+            "max_utxo_num": 200,
+            "btc_batch_withdraw_period": "10",
+            "max_btc_batch_withdraw_num": 100
+          },
+          "protocol_limits": {
+            "btc_min_deposit": "10000",
+            "btc_min_withdraw": "20000",
+            "btc_max_withdraw": "500000000"
+          },
+          "protocol_fees": {
+            "deposit_fee": "1000",
+            "withdraw_fee": "2000",
+            "collector": "tb1q0lhzflmy4036elnppzsp344nk93lx5q7hdj4gz"
+          },
+          "tss_params": {
+            "dkg_timeout_period": "86400s",
+            "participant_update_transition_period": "1209600s"
+          }
+        },
+        "best_block_header": {
+          "version": "859979776",
+          "hash": "000000000000003c208e4c8b866071257c1fd9ea44233fcb6f1464ac5c35218d",
+          "height": "3008400",
+          "previous_block_hash": "0000000024f383582cc40fab41407b8e2b3c9b2b691b9c44ad3f500cb2ee887f",
+          "merkle_root": "34471b1f65059f74c3b9cd2c0763ee46fc59e8135530be394ac6e9eddeec9fed",
+          "nonce": "1888947759",
+          "bits": "193fffc0",
+          "time": "1727737435",
+          "ntx": "3529"
+        },
+        "block_headers": [],
+        "utxos": []
+      },
+      "capability": {
+        "index": "1",
+        "owners": []
+      },
+      "consensus": null,
+      "crisis": {
+        "constant_fee": {
+          "denom": "uside",
+          "amount": "1000"
+        }
+      },
+      "distribution": {
+        "params": {
+          "community_tax": "0.020000000000000000",
+          "base_proposer_reward": "0.000000000000000000",
+          "bonus_proposer_reward": "0.000000000000000000",
+          "withdraw_addr_enabled": true
+        },
+        "fee_pool": {
+          "community_pool": []
+        },
+        "delegator_withdraw_infos": [],
+        "previous_proposer": "",
+        "outstanding_rewards": [],
+        "validator_accumulated_commissions": [],
+        "validator_historical_rewards": [],
+        "validator_current_rewards": [],
+        "delegator_starting_infos": [],
+        "validator_slash_events": []
+      },
+      "evidence": {
+        "evidence": []
+      },
+      "feegrant": {
+        "allowances": []
+      },
+      "feemarket": {
+        "block_gas": "10000000"
+      },
+      "genutil": {
+        "gen_txs": [
+          {
+            "body": {
+              "messages": [
+                {
+                  "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                  "description": {
+                    "moniker": "Side Labs",
+                    "identity": "666AC57CC678BEC4",
+                    "website": "https://side.one",
+                    "security_contact": "",
+                    "details": ""
+                  },
+                  "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                  },
+                  "min_self_delegation": "1",
+                  "delegator_address": "tb1q6wp6nhw9qyw2x9ecgfjjw3ewshadrzqs3qhrv7",
+                  "validator_address": "sidevaloper1qqdquqg6zvtsupgqqs8q5ps9ryvqszgjzg8pzxgwzqt36rgrqgqpqlkkyts",
+                  "pubkey": {
+                    "@type": "/cosmos.crypto.ed25519.PubKey",
+                    "key": "Ed61l9HFreS1iaT2YxE6EFoaQNp58F9jrHsbBFrjVp8="
+                  },
+                  "value": {
+                    "denom": "uside",
+                    "amount": "500000000000000"
+                  }
+                }
+              ],
+              "memo": "93aedf483b7ac375b18030f2a2c5788f5acbc545@192.248.180.245:26656",
+              "timeout_height": "0",
+              "extension_options": [],
+              "non_critical_extension_options": []
+            },
+            "auth_info": {
+              "signer_infos": [
+                {
+                  "public_key": {
+                    "@type": "/cosmos.crypto.segwit.PubKey",
+                    "key": "AinJrgGZRo8vb7Wb15Z442ZLxNouhJjKsd+VIzU4AYtI"
+                  },
+                  "mode_info": {
+                    "single": {
+                      "mode": "SIGN_MODE_DIRECT"
+                    }
+                  },
+                  "sequence": "0"
+                }
+              ],
+              "fee": {
+                "amount": [],
+                "gas_limit": "200000",
+                "payer": "",
+                "granter": ""
+              },
+              "tip": null
+            },
+            "signatures": [
+              "HxlZFM/cr9Frhfb2r6mJUz9wLgzoCxC5Q+SQS0dwrQL9aPCo/Pveoyzfj6asfDhUdVjUY7qyu32vkvwNJ8AZcSk="
+            ]
+          }
+        ]
+      },
+      "gov": {
+        "starting_proposal_id": "1",
+        "deposits": [],
+        "votes": [],
+        "proposals": [],
+        "deposit_params": {
+          "min_deposit": [
+            {
+              "denom": "uside"
+            }
+          ]
+        },
+        "voting_params": null,
+        "tally_params": null,
+        "params": {
+          "min_deposit": [
+            {
+              "denom": "uside",
+              "amount": "10000000"
+            }
+          ],
+          "max_deposit_period": "172800s",
+          "voting_period": "1800s",
+          "quorum": "0.334000000000000000",
+          "threshold": "0.500000000000000000",
+          "veto_threshold": "0.334000000000000000",
+          "min_initial_deposit_ratio": "0.000000000000000000",
+          "burn_vote_quorum": false,
+          "burn_proposal_deposit_prevote": false,
+          "burn_vote_veto": true
+        }
+      },
+      "group": {
+        "group_seq": "0",
+        "groups": [],
+        "group_members": [],
+        "group_policy_seq": "0",
+        "group_policies": [],
+        "proposal_seq": "0",
+        "proposals": [],
+        "votes": []
+      },
+      "ibc": {
+        "client_genesis": {
+          "clients": [],
+          "clients_consensus": [],
+          "clients_metadata": [],
+          "params": {
+            "allowed_clients": [
+              "06-solomachine",
+              "07-tendermint",
+              "09-localhost"
+            ]
+          },
+          "create_localhost": false,
+          "next_client_sequence": "0"
+        },
+        "connection_genesis": {
+          "connections": [],
+          "client_connection_paths": [],
+          "next_connection_sequence": "0",
+          "params": {
+            "max_expected_time_per_block": "30000000000"
+          }
+        },
+        "channel_genesis": {
+          "channels": [],
+          "acknowledgements": [],
+          "commitments": [],
+          "receipts": [],
+          "send_sequences": [],
+          "recv_sequences": [],
+          "ack_sequences": [],
+          "next_channel_sequence": "0"
+        }
+      },
+      "interchainaccounts": {
+        "controller_genesis_state": {
+          "active_channels": [],
+          "interchain_accounts": [],
+          "ports": [],
+          "params": {
+            "controller_enabled": true
+          }
+        },
+        "host_genesis_state": {
+          "active_channels": [],
+          "interchain_accounts": [],
+          "port": "icahost",
+          "params": {
+            "host_enabled": true,
+            "allow_messages": [
+              "*"
+            ]
+          }
+        }
+      },
+      "mint": {
+        "minter": {
+          "inflation": "0.130000000000000000",
+          "annual_provisions": "0.000000000000000000"
+        },
+        "params": {
+          "mint_denom": "uside",
+          "inflation_rate_change": "0.130000000000000000",
+          "inflation_max": "0.200000000000000000",
+          "inflation_min": "0.070000000000000000",
+          "goal_bonded": "0.670000000000000000",
+          "blocks_per_year": "6311520"
+        }
+      },
+      "params": null,
+      "slashing": {
+        "params": {
+          "signed_blocks_window": "100",
+          "min_signed_per_window": "0.500000000000000000",
+          "downtime_jail_duration": "600s",
+          "slash_fraction_double_sign": "0.050000000000000000",
+          "slash_fraction_downtime": "0.010000000000000000"
+        },
+        "signing_infos": [],
+        "missed_blocks": []
+      },
+      "staking": {
+        "params": {
+          "unbonding_time": "1814400s",
+          "max_validators": 100,
+          "max_entries": 7,
+          "historical_entries": 10000,
+          "bond_denom": "uside",
+          "min_commission_rate": "0.000000000000000000"
+        },
+        "last_total_power": "0",
+        "last_validator_powers": [],
+        "validators": [],
+        "delegations": [],
+        "unbonding_delegations": [],
+        "redelegations": [],
+        "exported": false
+      },
+      "transfer": {
+        "port_id": "transfer",
+        "denom_traces": [],
+        "params": {
+          "send_enabled": true,
+          "receive_enabled": true
+        },
+        "total_escrowed": []
+      },
+      "upgrade": {},
+      "vesting": {},
+      "wasm": {
+        "params": {
+          "code_upload_access": {
+            "permission": "Everybody",
+            "addresses": []
+          },
+          "instantiate_default_permission": "Everybody"
+        },
+        "codes": [],
+        "contracts": [],
+        "sequences": []
+      }
+    }
+  }
