@@ -37,7 +37,7 @@ shasum -a 256 ~/.side/config/genesis.json
 ```
 Expected output:
 ```
-3a179769eab0d7a65a72cadbfbd2350743789c53ada3e80bd87e6b1946aa1022  genesis.json
+349826a41d30264578103c1fe70e87b6d5f7c5a1a8427625b7b515da70f3e05b  genesis.json
 ```
 
 3. Set up persistence_peer:
