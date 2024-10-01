@@ -92,6 +92,12 @@ shuttler --home <home> id
 
 You can share your node address if possible. And the public nodes published by the TSS network members can be used as well.
 
+The seed node provided by Side Labs is as following:
+
+```
+/ip4/192.248.180.245/tcp/5158/p2p/12D3KooWMpMtmYQKSn1sZaSRn4CAcsraWZVrZ2zdNjEgsEPSd3Pv
+```
+
 3. Set the validator key
 
 ```
