@@ -44,12 +44,18 @@ At the same time, the bridge related transactions including deposit and withdraw
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-2. Clone and install
+2. Clone and build
 
 ```
 git clone https://github.com/sideprotocol/tssigner.git
 cd tssigner
-cargo install --release
+cargo build --release
+```
+
+The binary can be placed into the bin directory of Cargo for convenience.
+
+```
+cp target/release/shuttler ~/.cargo/bin
 ```
 
 ### Configure
@@ -57,22 +63,34 @@ cargo install --release
 1. Initialize
 
 ```
-shuttler --home ~/.shuttler init --network testnet --port 5158
+shuttler --home ~/.shuttler init --network testnet
 ```
 
-The *home* directory and *port* can be replaced by your choice.
+The *home* directory can be replaced by your choice.
 
-The random port will be generated if *--port* not set
+You can specify the port by `--port`. The default port is `5158`.
 
 2. Set the bootstrapping nodes
 
 ```
-bootstrap_nodes = [<seed node addresses>]
+bootstrap_nodes = ["<peer address>",...,"<peer address>"]
 ```
 
 The bootstrapping nodes are used to help connect to the TSS network when started.
 
-The public nodes can be used commonly.
+The format of the peer address is like this:
+
+```
+/ip4/<IP>/tcp/<PORT>/p2p/<PEER ID>
+```
+
+The `local peer id` can be retrieved as the following command:
+
+```
+shuttler --home <home> id
+```
+
+You can share your node address if possible. And the public nodes published by the TSS network members can be used as well.
 
 3. Set the validator key
 
@@ -87,7 +105,7 @@ The item should be set to the correct location which is commonly the *.side/conf
 
 ```
 [side_chain]
-grpc = <gprc address>
+grpc = "<gprc address>"
 ```
 
 If you run own Side node on the same server, the item can be set to `http://localhost:9090`. The value can be configured by the actual deployment or set to the public Side node which provides the gRPC server.
@@ -96,10 +114,10 @@ If you run own Side node on the same server, the item can be set to `http://loca
 
 ```
 [bitcoin]
-network = <network name>
-rpc = <rpc endpoint>
-user = <rpc username>
-password = <rpc password>
+network = "<network name>"
+rpc = "<rpc endpoint>"
+user = "<rpc username>"
+password = "<rpc password>"
 ```
 
 For signers and relayers, the bitcoin node rpc is required to send the signed transactions or sync the bitcoin block headers and the bridge related transactions to the Side chain.
@@ -111,10 +129,10 @@ The TSS node operator can deploy own bitcoin node or use the third-party server 
 The public bitcoin node information provided by Side Labs is as follows:
 
 ```
-network = testnet
-rpc = http://192.248.150.102:18332
-user = side
-password = 12345678
+network = "testnet"
+rpc = "http://192.248.150.102:18332"
+user = "side"
+password = "12345678"
 ```
 
 **_Note_**: The `--txindex` is required to be set when starting the Bitcoin node as following:
@@ -230,4 +248,3 @@ shuttler --home <home> start
    - Network: 1 Gbps
 
 **Note**: To ensure service quality, we strongly recommend not running the Side Chain validator node on any of the machines listed above.
-
