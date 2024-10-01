@@ -90,7 +90,7 @@ The `local peer id` can be retrieved as the following command:
 shuttler --home <home> id
 ```
 
-You can share your node address if possible. And the public nodes published by the TSS network members can be used as well.
+Please share your node address in the private channel so others can add you. and make sure to add at least 3 bootstrap nodes in your Shuttler config.
 
 The seed node provided by Side Labs is as following:
 
