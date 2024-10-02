@@ -161,6 +161,8 @@ shuttler --home <home> address
 
 The TSS node can be started by the different modes or roles: *`signer`* and *`relayer`*.
 
+*Note:* **At least signer mode is required to participate DKG**.
+
 1. Start as signer
 
 ```
