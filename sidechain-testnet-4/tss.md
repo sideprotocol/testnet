@@ -95,7 +95,7 @@ Please share your node address in the private channel so others can add you. and
 The seed node provided by Side Labs is as following:
 
 ```
-/ip4/192.248.180.245/tcp/5158/p2p/12D3KooWMpMtmYQKSn1sZaSRn4CAcsraWZVrZ2zdNjEgsEPSd3Pv
+/ip4/192.248.191.173/tcp/5158/p2p/12D3KooWKMW1rPBA6duAK3Ze2TgK6yd9oWGQNKmwTQbd3P2acz2S
 ```
 
 3. Set the validator key
