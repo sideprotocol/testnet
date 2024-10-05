@@ -40,9 +40,9 @@ Expected output:
 349826a41d30264578103c1fe70e87b6d5f7c5a1a8427625b7b515da70f3e05b  genesis.json
 ```
 
-3. Set up persistence_peer:
+3. Set up persistent_peer:
 ```sh
-93aedf483b7ac375b18030f2a2c5788f5acbc545@192.248.180.245:26656
+be531d2ed3841378fe7106d92ed4cc6a9c4b11be@192.248.180.245:26656
 ```
 
 *Community Peers*
