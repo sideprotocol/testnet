@@ -59,14 +59,14 @@ Certainly! Here's a tutorial with the commands:
    git clone https://github.com/sideprotocol/side.git
    ```
 
-2. Checkout to the desired version (e.g., v0.7.0-rc2):
-   ```sh
-   git checkout v0.7.0-rc2
-   ```
-
-3. Move to the SIDE directory:
+2. Move to the SIDE directory:
    ```sh
    cd side
+   ```
+
+3. Checkout to the desired version (e.g., v0.7.0-rc2):
+   ```sh
+   git checkout v0.7.0-rc2
    ```
 
 4. Install SIDE:
