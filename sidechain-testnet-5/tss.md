@@ -40,6 +40,7 @@ At the same time, the bridge related transactions including deposit and withdraw
 
 ```
 wget https://github.com/sideprotocol/testnet/raw/main/sidechain-testnet-5/shuttler -O ~/shuttler
+chmod 777 shuttler
 ```
 
 ### Configure
@@ -143,16 +144,18 @@ shuttler --home <home> address
 
 ### Start
 
-The TSS node can be started by the different modes or roles: *`signer`* and *`relayer`*.
-
-*Note:* **At least signer mode is required to participate DKG**.
-
 1. Start
 
 ```
 shuttler --home <home> start --bridge --lending
 ```
 ```
+
+### Sofeware Specifications
+
+   - Operating System
+
+   Ubuntu 64-bit stable version 
 
 
 ### Hardware Specifications

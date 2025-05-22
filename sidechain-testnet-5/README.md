@@ -67,6 +67,12 @@ version: 2.0.0-rc.1
 sided start
 ```
 
+# Faucet
+   ```sh
+   https://testnet.ping.pub/side/faucet
+   ```
+   You can get a small amount of side from this address to create a validator or fund tss address.
+
 # Validating
 
 1. Add a **Bitcoin Segwit Address**
