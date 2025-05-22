@@ -56,7 +56,7 @@ Expected output:
 sided version --long
 ```
 ```sh
-commit: c0da8b150c0d1c8039882f1cf3c279552df11b95
+commit: f966c04b768a0a8f510f9882f376acbcac5040a6
 cosmos_sdk_version: v0.50.12
 go: go version go1.23.0 linux/amd64
 name: sidechain
