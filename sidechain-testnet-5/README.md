@@ -96,7 +96,7 @@ sided tx staking create-validator \
 --pubkey=$(sided tendermint show-validator)  \
 --moniker="side_node" \
 --security-contact="contact@side.one" \
---chain-id="sidechain-testnet-4" \
+--chain-id="sidechain-testnet-5" \
 --commission-rate="0.1" \
 --commission-max-rate="0.2" \
 --commission-max-change-rate="0.05" \
