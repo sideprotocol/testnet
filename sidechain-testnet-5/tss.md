@@ -131,7 +131,7 @@ TSS info:
 tss name: <your node moniker>
 tss pubkey: <pubkey>
 ```
-Submit the above information in the TG group "Side Protocol Signer Set" and tag @shaneqiu.
+Please submit the above information in the Telegram group you are already in, “Side Protocol Signer Set,” and tag @shaneqiu, who is collecting the submissions.
 
 ### Waiting for proposal to be submitted and participate in voting
 
