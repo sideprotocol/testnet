@@ -45,7 +45,7 @@ chmod 777 shuttler
 
 ### Configure
 
-1. Initialize
+#### 1. Initialize
 ```
 shuttler --home ~/.shuttler init --network testnet
 ```
@@ -54,7 +54,7 @@ The *home* directory can be replaced by your choice.
 
 You can specify the port by `--port`. The default port is `5158`.
 
-2. Set the bootstrapping nodes
+#### 2. Set the bootstrapping nodes
 
 ```sh
 vi ~/.shuttler/config.toml
@@ -78,14 +78,14 @@ The seed node provided by Side Labs is as following:
 /ip4/80.240.21.182/tcp/5158/p2p/12D3KooWNG62UtivnohfQkDUbXZXHD41sVnbpMSo3nJk9ipnhNE4
 ```
 
-3. Set the Side gRPC
+#### 3. Set the Side gRPC
 ```
 [side_chain]
 grpc = "<gprc address>"
 ```
 If you run own Side node on the same server, the item can be set to `http://localhost:9090`. The value can be configured by the actual deployment or set to the public Side node which provides the gRPC server.
 
-4. Set the Bitcoin RPC
+#### 4. Set the Bitcoin RPC
 ```
 [bitcoin]
 network = "<network name>"
@@ -119,13 +119,13 @@ shuttler --home <home> address
 
 ### Submit your tss pubkey to us
 
-1. Get your tss pubkey
+#### 1. Get your tss pubkey
 ```sh
 vi .shuttler/priv_validator_key.json
 ```
 Get your tss pubkey value.
 
-2. Submit pubkey to us
+#### 2. Submit pubkey to us
 TSS info:
 ```
 tss name: <your node moniker>
@@ -135,30 +135,30 @@ Submit the above information in the TG group "Side Protocol Signer Set" and tag 
 
 ### Waiting for proposal to be submitted and participate in voting
 
-1. Proposal
+#### 1. Proposal
 We will submit a proposal to add TSS network whitelist.
 
-2. Voting
+#### 2. Voting
 Please wait for the above proposal and vote.
 
-3. Waiting for the proposal to be approved.
+#### 3. Waiting for the proposal to be approved.
 
 ### Start TSSigner
 
-1. Start
+#### Start
 After waiting for the above proposal to be passed, execute the following command to run the TSS node.
 ```
 shuttler --home <home> start --bridge --lending
 ```
 
-### Sofeware Specifications
+# Sofeware Specifications
 
    - Operating System
 
    Ubuntu 64-bit stable version 
 
 
-### Hardware Specifications
+# Hardware Specifications
 
 #### Running only the TSS node
 
