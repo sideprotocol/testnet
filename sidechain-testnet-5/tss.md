@@ -46,9 +46,8 @@ chmod 777 shuttler
 ### Configure
 
 1. Initialize
-
 ```
-~/shuttler --home ~/.shuttler init --network testnet
+shuttler --home ~/.shuttler init --network testnet
 ```
 
 The *home* directory can be replaced by your choice.
@@ -57,52 +56,36 @@ You can specify the port by `--port`. The default port is `5158`.
 
 2. Set the bootstrapping nodes
 
-```
+```sh
+vi ~/.shuttler/config.toml
 bootstrap_nodes = ["<peer address>",...,"<peer address>"]
 ```
 
 The bootstrapping nodes are used to help connect to the TSS network when started.
-
 The format of the peer address is like this:
-
 ```
 /ip4/<IP>/tcp/<PORT>/p2p/<PEER ID>
 ```
 
-The `local peer id` can be retrieved as the following command:
-
+Your `peer id` can be retrieved as the following command:
 ```
-~/shuttler --home <home> address
+shuttler --home <home> address
 ```
-
 Please share your node address in the private channel so others can add you. and make sure to add at least 3 bootstrap nodes in your Shuttler config.
 
 The seed node provided by Side Labs is as following:
-
 ```
 /ip4/80.240.21.182/tcp/5158/p2p/12D3KooWNG62UtivnohfQkDUbXZXHD41sVnbpMSo3nJk9ipnhNE4
 ```
 
-3. Set the validator key
-
-```
-priv_validator_key_path = "<validator key path>"
-```
-
-The validator key is required to participate the DKG.
-The item should be set to the correct location which is commonly the *.side/config/priv_validator_key.json* in the home directory.
-
-4. Set the Side gRPC
-
+3. Set the Side gRPC
 ```
 [side_chain]
 grpc = "<gprc address>"
 ```
-
 If you run own Side node on the same server, the item can be set to `http://localhost:9090`. The value can be configured by the actual deployment or set to the public Side node which provides the gRPC server.
 
-5. Set the Bitcoin RPC
-
+4. Set the Bitcoin RPC
 ```
 [bitcoin]
 network = "<network name>"
@@ -112,20 +95,15 @@ password = "<rpc password>"
 ```
 
 For signers and relayers, the bitcoin node rpc is required to send the signed transactions or sync the bitcoin block headers and the bridge related transactions to the Side chain.
-
 In the Side testnet phase 3, the corresponding bitcoin network is `testnet3`. For testnet3, the network name is `testnet` and defaut port is `18332`.
-
 The TSS node operator can deploy own bitcoin node or use the third-party server provider by demand.
-
 The public bitcoin node information provided by Side Labs is as follows:
-
 ```
 network = "testnet"
 rpc = "http://192.248.150.102:18332"
 user = "side"
 password = "12345678"
 ```
-
 **_Note_**: The `--txindex` is required to be set when starting the Bitcoin node as following:
 
 ```
@@ -133,22 +111,44 @@ bitcoind -txindex -rpcuser=<user> --rpcpassword=<password>
 ```
 
 ### Fund the relayer address
-
 The relayer(Side transaction sender) address can be viewed by the following command:
-
 ```
 shuttler --home <home> address
 ```
+**Note**: Before starting the TSS node, the relayer address needs to be funded for sending the transactions to the Side chain.
 
-**Note**: Before starting the TSS node, the sender address needs to be funded for sending the transactions to the Side chain.
+### Submit your tss pubkey to us
 
-### Start
+1. Get your tss pubkey
+```sh
+vi .shuttler/priv_validator_key.json
+```
+Get your tss pubkey value.
+
+2. Submit pubkey to us
+TSS info:
+```
+tss name: <your node moniker>
+tss pubkey: <pubkey>
+```
+Submit the above information in the TG group "Side Protocol Signer Set" and tag @shaneqiu.
+
+### Waiting for proposal to be submitted and participate in voting
+
+1. Proposal
+We will submit a proposal to add TSS network whitelist.
+
+2. Voting
+Please wait for the above proposal and vote.
+
+3. Waiting for the proposal to be approved.
+
+### Start TSSigner
 
 1. Start
-
+After waiting for the above proposal to be passed, execute the following command to run the TSS node.
 ```
 shuttler --home <home> start --bridge --lending
-```
 ```
 
 ### Sofeware Specifications

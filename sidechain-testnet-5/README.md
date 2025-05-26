@@ -23,6 +23,20 @@
    make install
    ```
 
+5. Check your SIDE version
+```sh
+sided version --long
+```
+
+```sh
+commit: f966c04b768a0a8f510f9882f376acbcac5040a6
+cosmos_sdk_version: v0.50.12
+go: go version go1.23.0 linux/amd64
+name: sidechain
+server_name: sided
+version: 2.0.0-rc.1
+```
+
 # Launch
 Here's your tutorial with the commands formatted for clarity:
 
@@ -40,29 +54,33 @@ Expected output:
 627e3ab93b3f40d9081dfb5b6cbac3f4c30b6fca4da8b0ed5b277ecf219be3db  genesis.json
 ```
 
-3. Set up persistent_peer:
+3. Set up Bitcoin RPC params:
+```sh
+vi ~/.side/config/app.toml
+```
+
+Modify the oracle config at the end of the file as follows:
+```
+[oracle]
+enable = true
+bitcoin_rpc = "192.248.150.102:18332"
+bitcoin_rpc_user = "side"
+bitcoin_rpc_password = "12345678"
+http_post_mode = true
+disable_tls = true
+```
+Alternatively, you can run your own bitcoin testnet node and configure it to the corresponding rpc address.
+
+4. Set up persistent_peer:
+```sh
+vi ~/.side/config/config.toml
+```
+
 ```sh
 8fe46ca180a5c6989e83de31755e6e21f6de67f3@80.240.21.182:26656
 ```
 
-*Community Peers*
-```sh
-# please add your peer here.
-```
-
-
-4. Start your node:
-```sh
-sided version --long
-```
-```sh
-commit: f966c04b768a0a8f510f9882f376acbcac5040a6
-cosmos_sdk_version: v0.50.12
-go: go version go1.23.0 linux/amd64
-name: sidechain
-server_name: sided
-version: 2.0.0-rc.1
-```
+5. Start your node:
 ```sh
 sided start
 ```
@@ -84,7 +102,6 @@ sided start
   pubkey: '{"@type":"/cosmos.crypto.segwit.PubKey","key":"A9slrakoWNPJz6RYLwbLggGKvRlQUXyAHFk4gNegy7jI"}'
   type: local
 ```
-
 **Note:**
 Please ensure that you use a Segwit address; otherwise, you will not be able to claim your rewards.
 
