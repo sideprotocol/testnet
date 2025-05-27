@@ -5,6 +5,32 @@ Validators are responsible for committing new blocks to the blockchain through a
 
 The following instructions assume you have already set up a full-node and are synchonised to the latest blockheight.
 
+## What’s the Difference Between Side Chain Validators and Validators on Other Cosmos-Based Blockchains?
+
+Side Chain validators have distinctive responsibilities compared to validators on typical Cosmos-based blockchains. In addition to standard block validation tasks, Side Chain validators also perform oracle services. This includes:
+
+- **Aggregating Bitcoin Prices:** Validators collect real-time Bitcoin prices from leading exchanges such as Binance, Bybit, Coinbase, Bitget, and OKEX. These prices are aggregated using a weighted average algorithm to ensure accuracy and reliability.
+- **Maintaining a Bitcoin Light Client:** Validators are required to synchronize Bitcoin block headers from a Bitcoin full node. This process ensures that an embedded Bitcoin light client on the Side Chain remains up-to-date and secure.
+
+### Additional Requirements
+
+Before operating a Side Chain validator node, you must:
+
+- **Check Network Latency:** Evaluate the network latency between your validator node and the WebSocket endpoints of the supported exchanges. Low latency is crucial for timely and accurate price aggregation.
+  
+| Exchange | Websocket Endpoint |
+|-----|----|
+|Binance|wss://stream.binance.com:443/stream?streams=btcusdt@miniTicker/atomusdt@miniTicker|
+|Bybit|wss://stream.bybit.com/v5/public/spot|
+|Coinbase|wss://ws-feed.exchange.coinbase.com|
+|Bitget | wss://ws.bitget.com/v2/ws/public|
+|OKEX | wss://ws.okx.com:8443/ws/v5/public |
+- **Run a Bitcoin Full Node:** Set up and maintain a Bitcoin full node. This is necessary to fetch and synchronize Bitcoin block headers for the embedded light client.
+
+**In summary**, Side Chain validators not only secure the blockchain as traditional validators do, but also play a key role in bridging data from external sources and maintaining connectivity with the Bitcoin network.
+
+
+
 ## Creating Your Validator
 
 ### Get some SIDE tokens from faucet
