@@ -76,7 +76,7 @@ Strongly recommended, you can run your own bitcoin testnet node and configure it
 Bitcoin testnet full node installation instructions: [bitcoin_testnet.md](https://github.com/sideprotocol/testnet/blob/main/sidechain-testnet-5/bitcoin_testnet.md)
 
 
-4. Set up persistent_peer:
+### 4. Set up persistent_peer:
 ```sh
 vi ~/.side/config/config.toml
 ```
