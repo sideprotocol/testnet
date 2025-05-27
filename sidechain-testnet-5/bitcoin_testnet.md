@@ -1,0 +1,84 @@
+# Running a Bitcoin Testnet3 Full Node
+
+## Introduction
+This document provides step-by-step instructions for setting up and running a full node on Bitcoin's testnet3 network. Testnet is an alternative blockchain used for testing purposes, where the coins have no real value.
+
+## Prerequisites
+- A computer with at least 2GB RAM (4GB recommended)
+- At least 400GB of free storage space (testnet blockchain is smaller than mainnet but still substantial)
+- A stable internet connection with unlimited data or high data caps
+- Basic command line knowledge
+
+## Installation Steps
+
+### Step 1: Update System Packages
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### Step 2: Install Dependencies
+```bash
+sudo apt install -y build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 libssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev
+```
+
+### Step 3: Download Bitcoin Core
+```bash
+wget https://bitcoincore.org/bin/bitcoin-core-29.0/bitcoin-29.0-x86_64-linux-gnu.tar.gz
+```
+(Replace with latest version from [bitcoincore.org](https://bitcoincore.org/en/download/))
+
+### Step 4: Verify Download (Optional but Recommended)
+```bash
+wget https://bitcoincore.org/bin/bitcoin-core-29.0/SHA256SUMS
+wget https://bitcoincore.org/bin/bitcoin-core-29.0/SHA256SUMS.asc
+sha256sum --check SHA256SUMS --ignore-missing
+```
+
+### Step 5: Install Bitcoin Core
+```bash
+tar -xzvf bitcoin-29.0-x86_64-linux-gnu.tar.gz
+sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-29.0/bin/*
+```
+
+### Step 6: Create Bitcoin Data Directory
+```bash
+mkdir -p ~/.bitcoin/testnet3
+```
+
+### Step 7: Create Configuration File
+```bash
+vi ~/.bitcoin/bitcoin.conf
+```
+
+Add these configuration options:
+```
+testnet=1
+txindex=0
+
+[test]
+rpcbind=0.0.0.0:18332
+rpcallowip=0.0.0.0/0
+rpcuser=your_username
+rpcpassword=your_strong_password
+```
+
+### Step 8: Start Bitcoin Testnet Node
+```bash
+bitcoind
+```
+
+### Step 9: Monitor Synchronization Progress
+```bash
+bitcoin-cli getblockchaininfo
+```
+
+### Step 10: Stop the node:
+```bash
+bitcoin-cli stop
+```
+
+## Notes:
+1. Initial sync may take several hours/days depending on your hardware.
+2. Testnet blockchain requires about 40GB+ of storage (as of 2023)
+3. Ensure your firewall allows incoming connections on port 18332
+4. Wait for bitcoin testnet to synchronize to the latest block, then update the side node configuration.
