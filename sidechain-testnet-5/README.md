@@ -71,7 +71,7 @@ disable_tls = true
 ```
 Alternatively, you can run your own bitcoin testnet node and configure it to the corresponding rpc address.
 
-Oracle is necessary only for validator nodes. For fullnodes, it can be disabled by setting ‘enable = false’.
+Oracle is necessary only for validator nodes. For fullnodes, it can be disabled by setting `enable = false`.
 
 4. Set up persistent_peer:
 ```sh
