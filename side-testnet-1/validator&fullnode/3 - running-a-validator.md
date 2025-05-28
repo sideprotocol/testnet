@@ -31,6 +31,33 @@ Before operating a Side Chain validator node, you must:
 **In summary**, Side Chain validators not only secure the blockchain as traditional validators do, but also play a key role in bridging data from external sources and maintaining connectivity with the Bitcoin network.The latency between exchanges and Bitcoin full node will affect your uptime and may lead to your validator being jailed.
 
 
+## Enabling the Oracle Module for Validator Nodes
+
+***Before creating a validator, you must first enable the oracle module.***
+
+To enable the oracle functionality, open your `app.toml` file and locate the `[oracle]` section. This section contains parameters required for nodes to query data from a Bitcoin client.
+
+Set the following configuration:
+
+```toml
+[oracle]
+# Set to true if this node will act as a validator. For non-validator (full) nodes, set to false.
+enable = true
+
+# The RPC endpoint of your Bitcoin full node.
+bitcoin_rpc = "http://127.0.0.1:8332"
+# The username for authenticating with your Bitcoin full node.
+bitcoin_rpc_user = "your_rpc_username"
+# The password for authenticating with your Bitcoin full node.
+bitcoin_rpc_password = "your_rpc_password"
+# Enable HTTP POST mode for Bitcoin RPC (usually should be true).
+http_post_mode = true
+# Disable TLS for local connections (set to false if using TLS).
+disable_tls = true
+```
+
+> **Note:**  
+> Setting `enable = true` allows your node to perform oracle duties and connect to a Bitcoin client. This is required for validator nodes participating in oracle services.
 
 ## Creating Your Validator
 
