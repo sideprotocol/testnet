@@ -25,7 +25,8 @@ Before operating a Side Chain validator node, you must:
 |Coinbase|wss://ws-feed.exchange.coinbase.com|
 |Bitget | wss://ws.bitget.com/v2/ws/public|
 |OKEX | wss://ws.okx.com:8443/ws/v5/public |
-- **Run a Bitcoin Full Node:** Set up and maintain a Bitcoin full node. This is necessary to fetch and synchronize Bitcoin block headers for the embedded light client.
+- **Run a Bitcoin Light Client:** Set up and maintain a Bitcoin Light Client. This is necessary to fetch and synchronize Bitcoin block headers for the embedded light client. [Installation](https://github.com/sideprotocol/testnet/blob/main/side-testnet-1/validator%26fullnode/2.1%20Running%20bitcoin%20light%20client.md)
+  
 
 **In summary**, Side Chain validators not only secure the blockchain as traditional validators do, but also play a key role in bridging data from external sources and maintaining connectivity with the Bitcoin network.The latency between exchanges and Bitcoin full node will affect your uptime and may lead to your validator being jailed.
 
