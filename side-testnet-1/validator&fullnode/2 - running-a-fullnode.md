@@ -120,6 +120,27 @@ Open `app.toml`, find `minimum-gas-prices`, which defines the minimum gas prices
  # specified in this config (e.g. 0.25token1;0.0001token2).
  minimum-gas-prices = "0.005uside"
 ```
+### Disabling the Oracle Module
+
+To disable the oracle functionality, open your `app.toml` file and locate the `[oracle]` section. This section contains parameters required for nodes to query data from a Bitcoin client.
+
+Set the following configuration:
+
+```toml
+[oracle]
+# Set to true if this node will act as a validator. For non-validator (full) nodes, set to false.
+enable = false
+
+bitcoin_rpc = ""
+bitcoin_rpc_user = ""
+bitcoin_rpc_password = ""
+http_post_mode = true
+disable_tls = true
+```
+
+> **Note:**  
+> Setting `enable = false` ensures that your node will not attempt to perform oracle duties or connect to a Bitcoin client. This is recommended for full nodes that do not participate in validation or oracle services.
+
 
 # Start Node and Sync
 ```sh
