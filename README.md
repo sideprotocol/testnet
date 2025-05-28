@@ -1,2 +1,2 @@
 # testnet
-public testnet
+The latest public testnet: sidechain-testnet-5
