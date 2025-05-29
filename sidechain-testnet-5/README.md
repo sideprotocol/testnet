@@ -116,7 +116,7 @@ Please ensure that you use a Segwit address; otherwise, you will not be able to 
 ```sh
 sided tx staking create-validator \
 --from="test" \
---amount="10000000uside" \
+--amount="1000000uside" \
 --pubkey=$(sided tendermint show-validator)  \
 --moniker="side_node" \
 --security-contact="contact@side.one" \
@@ -124,5 +124,7 @@ sided tx staking create-validator \
 --commission-rate="0.1" \
 --commission-max-rate="0.2" \
 --commission-max-change-rate="0.05" \
---min-self-delegation="10000000" \
+--min-self-delegation="1000000" \
+--fees="200uside" \
+--gas="300000" \
 ```
