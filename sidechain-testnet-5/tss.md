@@ -59,7 +59,7 @@ The binary can be placed into the bin directory of Cargo for convenience.
 cp target/release/shuttler ~/.cargo/bin
 ```
 
-### Download the binary file
+### Or download the binary file
 
 ```
 wget https://github.com/sideprotocol/testnet/raw/main/sidechain-testnet-5/shuttler -O ~/shuttler
