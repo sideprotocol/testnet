@@ -36,6 +36,29 @@ At the same time, the bridge related transactions including deposit and withdraw
 
 ## Get started
 
+### Build from source
+
+1. Install *Rust*
+
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+2. Clone and build
+
+```
+git clone https://github.com/sideprotocol/shuttler.git
+cd shuttler
+git checkout v2.0.0-rc.1
+cargo build --release
+```
+
+The binary can be placed into the bin directory of Cargo for convenience.
+
+```
+cp target/release/shuttler ~/.cargo/bin
+```
+
 ### Download the binary file
 
 ```
