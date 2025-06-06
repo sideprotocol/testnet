@@ -60,6 +60,10 @@ sided comet unsafe-reset-all
 vi ~/.side/config/app.toml
 ```
 Modify the oracle config at the end of the file as follows:
+
+> Strongly recommended, you can run your own bitcoin testnet node and configure it to the corresponding rpc address.
+> Bitcoin testnet full node installation instructions: [bitcoin_testnet.md](https://github.com/sideprotocol/testnet/blob/main/sidechain-testnet-6/bitcoin_testnet.md)
+
 ```sh
 [oracle]
 enable = true
@@ -70,8 +74,6 @@ http_post_mode = true
 disable_tls = true
 ```
 Oracle is necessary only for validator nodes. For fullnodes, it can be disabled by setting `enable = false`.  
-Strongly recommended, you can run your own bitcoin testnet node and configure it to the corresponding rpc address.
-Bitcoin testnet full node installation instructions: [bitcoin_testnet.md](https://github.com/sideprotocol/testnet/blob/main/sidechain-testnet-6/bitcoin_testnet.md)
 
 ### 1.10 Set up persistent peers:
 ```sh
