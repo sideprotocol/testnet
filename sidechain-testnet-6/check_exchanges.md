@@ -18,7 +18,7 @@ Connected (press CTRL+C to quit)
 
 # 2. Check the connectivity with bitget
 ```sh
-wscat -c wss://stream.binance.com:443/stream
+wscat -c wss://ws.bitget.com/v2/ws/public
 ```
 Enter in the interactive command line
 ```sh
