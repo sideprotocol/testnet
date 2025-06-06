@@ -7,7 +7,7 @@ npm install -g wscat
 
 # 1. Check the connectivity with binance
 ```sh
-wscat -c wss://stream.binance.com:443/stream
+wscat -c wss://stream.binance.com:443/stream?streams=btcusdt@miniTicker/atomusdt@miniTicker
 ```
 Expected output like:
 ```sh
