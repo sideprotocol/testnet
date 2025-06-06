@@ -1,7 +1,10 @@
 # 0. Install wscat
 ```sh
 sudo apt update
-sudo apt install nodejs npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc   # or ~/.zshrc if using zsh
+nvm install --lts
+nvm use --lts
 npm install -g wscat
 ```
 
