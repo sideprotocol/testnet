@@ -99,25 +99,7 @@ Expected output like:
 Please replace the above request parameters with your actual bitcoin node data.
 
 (2) Check the connectivity with exchanges  
-Install wscat:
-```sh
-sudo apt update
-sudo apt install nodejs npm
-npm install -g wscat
-```
-
-Execute the following commands respectively:
-```sh
-wscat -c wss://stream.binance.com:443/stream
-wscat -c wss://ws.bitget.com/v2/ws/public
-wscat -c wss://stream.bybit.com/v5/public/spot
-wscat -c wss://ws-feed.exchange.coinbase.com
-wscat -c wss://ws.okx.com:8443/ws/v5/public
-```
-They have the same expected output:
-```sh
-Connected (press CTRL+C to quit)
-```
+Please refer to the document: [check_exchanges.md](https://github.com/sideprotocol/testnet/blob/main/sidechain-testnet-6/check_exchanges.md)
 
 ### 1.12 Start your node
 ```sh
