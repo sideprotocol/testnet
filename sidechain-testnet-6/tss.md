@@ -97,6 +97,7 @@ The seed node provided by Side Labs is as following:
 ```
 /ip4/80.240.21.182/tcp/5158/p2p/12D3KooWJoyN8YPdMmE7HXZQG8uN3X3MkidDsDgxQaoYfUXN9iRA
 /ip4/45.77.249.30/tcp/5158/p2p/12D3KooWHz2XLXiGEsf7uE8mDXaPQG32Kmgn8xvKqRzMi4pQiZoy
+/ip4/188.40.66.173/tcp/5158/p2p/12D3KooWPPuPBjCVTTLdvh96NomEXDvmFCKwvC6pScWK3VPqxh9C
 ```
 
 #### 3. Set the Side gRPC
